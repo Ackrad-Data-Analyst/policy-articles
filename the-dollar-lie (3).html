@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Dollar Lie — Ackrad Seth Shimwense">
+<meta property="og:description" content="Zambia borrows $1 billion at 22.5% interest. Germany borrows the same at 2.29%. That gap is not the market being rational. It is the market repeating back a story written with the wrong ruler.">
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Dollar Lie — Ackrad Seth Shimwense">
+<meta name="twitter:description" content="Zambia borrows at 22.5%. Germany borrows the same money at 2.29%. That is not risk. That is a measurement problem costing Africa billions.">
+
+<title>The Dollar Lie | Ackrad Seth Shimwense</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:       #f9f5ef;
+  --cream2:      #f0ebe1;
+  --cream3:      #e5ddd0;
+  --ink:         #1a1714;
+  --ink2:        #3c3630;
+  --ink3:        #7a7068;
+  --red:         #b5281c;
+  --red-light:   #fdf0ee;
+  --green:       #1b5c38;
+  --green-light: #edf4f0;
+  --gold:        #9a6f1a;
+  --rule:        #d4c9b8;
+  --white:       #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.0;
+  overflow-x: hidden;
+}
+
+/* ── PROGRESS BAR ── */
+#progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: var(--red);
+  width: 0%;
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+/* ── SOCIAL CARD ── */
+.social-card { width: 100%; line-height: 0; display: block; overflow: hidden; }
+.social-card svg { display: block; width: 100%; height: auto; }
+
+/* ── SERIES TAG ── */
+.series-tag {
+  background: var(--ink);
+  text-align: center;
+  padding: 10px 20px;
+}
+.series-tag span {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #9a9088;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.series-tag strong { color: #e8c880; }
+
+/* ── MASTHEAD ── */
+.masthead {
+  background: var(--cream);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.m-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+}
+.m-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+}
+
+/* ── HERO ── */
+.hero {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 72px 32px 56px;
+  border-bottom: 2px solid var(--ink);
+}
+.hero-kicker {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-kicker::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--red);
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 8vw, 84px);
+  font-weight: 700;
+  line-height: .98;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--red);
+}
+.hero-deck {
+  font-family: 'Lora', serif;
+  font-size: clamp(17px, 2.2vw, 20px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--ink2);
+  max-width: 640px;
+  margin: 28px 0 36px;
+}
+.hero-byline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+}
+.byline-av {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.byline-info { line-height: 1.5; }
+.byline-name {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+}
+.byline-role {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+  letter-spacing: .06em;
+}
+
+/* ── INTRO BANNER ── */
+.intro-banner {
+  background: var(--ink);
+  padding: 64px 32px;
+  text-align: center;
+}
+.intro-banner blockquote {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 4vw, 36px);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.35;
+  color: #f0ebe1;
+}
+.intro-banner blockquote em {
+  color: #e8c880;
+  font-style: normal;
+}
+.intro-banner cite {
+  display: block;
+  margin-top: 20px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #706860;
+  font-style: normal;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* ── ARTICLE BODY ── */
+.article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 32px;
+}
+
+.section-marker {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  border-top: 1px solid var(--rule);
+  padding-top: 36px;
+  margin: 60px 0 20px;
+}
+
+.article h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 3.5vw, 32px);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--ink);
+  margin-bottom: 28px;
+}
+
+.article p {
+  font-family: 'Lora', serif;
+  font-size: clamp(16px, 1.9vw, 18px);
+  line-height: 1.85;
+  color: var(--ink2);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+/* inline citation superscript */
+.cite-ref {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--red);
+  text-decoration: none;
+  vertical-align: super;
+  line-height: 0;
+  margin-left: 1px;
+}
+.cite-ref:hover { text-decoration: underline; }
+
+/* ── KEY STAT CALLOUT ── */
+.stat-callout {
+  border-left: 4px solid var(--red);
+  background: var(--red-light);
+  padding: 28px 32px;
+  margin: 40px 0;
+  border-radius: 0 6px 6px 0;
+}
+.stat-callout .big-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.stat-callout .stat-text {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink2);
+  font-style: italic;
+}
+.stat-callout .stat-src {
+  margin-top: 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--ink3);
+  letter-spacing: .06em;
+}
+.stat-callout .stat-src a {
+  color: var(--red);
+  text-decoration: none;
+}
+.stat-callout .stat-src a:hover { text-decoration: underline; }
+
+/* ── INTEREST RATE COMPARISON ── */
+.rate-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 44px 0;
+}
+@media (max-width: 540px) { .rate-compare { grid-template-columns: 1fr; } }
+.rate-card {
+  padding: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+}
+.rate-card.bad  { background: var(--red-light); border-color: #e8b0a4; }
+.rate-card.good { background: var(--green-light); border-color: #9fcbb8; }
+.rate-card .rc-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.rate-card.bad  .rc-label { color: var(--red); }
+.rate-card.good .rc-label { color: var(--green); }
+.rate-card .rc-rate {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.rate-card.bad  .rc-rate { color: #8a2a13; }
+.rate-card.good .rc-rate { color: #0f3d26; }
+.rate-card .rc-sub {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  color: var(--ink3);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.rate-card .rc-total {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+}
+.rate-card .rc-total-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--ink3);
+  margin-top: 4px;
+  letter-spacing: .04em;
+}
+.rate-card .rc-tag {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  letter-spacing: .06em;
+}
+.rate-card.bad  .rc-tag { background: #f5c7be; color: #8a2a13; }
+.rate-card.good .rc-tag { background: #b8dece; color: #0f3d26; }
+
+/* ── FACT TRIO ── */
+.fact-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 44px 0;
+}
+@media (max-width: 540px) { .fact-trio { grid-template-columns: 1fr; } }
+.fact-cell {
+  background: var(--white);
+  padding: 24px 20px;
+  text-align: center;
+}
+.fact-cell .f-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.fact-cell .f-label {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink3);
+}
+.fact-src-row {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--ink3);
+  text-align: center;
+  margin-top: -32px;
+  margin-bottom: 44px;
+  letter-spacing: .04em;
+}
+.fact-src-row a { color: var(--red); text-decoration: none; }
+.fact-src-row a:hover { text-decoration: underline; }
+
+/* ── ROAD IMPACT ── */
+.road-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 44px 0;
+}
+@media (max-width: 540px) { .road-compare { grid-template-columns: 1fr; } }
+.road-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 24px;
+}
+.road-card .rd-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+  color: var(--ink3);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.road-card .rd-row { margin-bottom: 14px; }
+.road-card .rd-row-top {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+  margin-bottom: 5px;
+}
+.road-card .rd-row-top span:last-child {
+  font-weight: 700;
+  color: var(--ink);
+}
+.bar-track {
+  background: var(--cream3);
+  border-radius: 3px;
+  height: 7px;
+}
+.bar-fill { height: 7px; border-radius: 3px; }
+.road-card .rd-result {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  margin-top: 4px;
+}
+.road-card.bad  .rd-result { color: var(--red); }
+.road-card.good .rd-result { color: var(--green); }
+.road-card .rd-note {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--ink3);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ── PULL QUOTE ── */
+.pull-quote {
+  border: 2px solid var(--ink);
+  padding: 36px 40px;
+  margin: 52px 0;
+  position: relative;
+}
+.pull-quote::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 120px;
+  color: var(--cream3);
+  position: absolute;
+  top: -24px; left: 20px;
+  line-height: 1;
+  pointer-events: none;
+}
+.pull-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(19px, 2.8vw, 26px) !important;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.42 !important;
+  color: var(--ink) !important;
+  margin-bottom: 14px !important;
+  position: relative;
+  z-index: 1;
+}
+.pull-quote cite {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+  font-style: normal;
+  letter-spacing: .06em;
+  display: block;
+}
+
+/* ── CHARTS ── */
+.chart-block {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 32px 28px;
+  margin: 44px 0;
+}
+.chart-block .ch-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.chart-block .ch-sub {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  color: var(--ink3);
+  line-height: 1.55;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.chart-block .ch-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+}
+.ch-legend span { display: flex; align-items: center; gap: 5px; }
+.leg-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+.chart-canvas-wrap { position: relative; width: 100%; }
+.chart-block .ch-source {
+  margin-top: 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--ink3);
+  letter-spacing: .04em;
+  line-height: 1.7;
+}
+.chart-block .ch-source a {
+  color: var(--red);
+  text-decoration: none;
+}
+.chart-block .ch-source a:hover { text-decoration: underline; }
+
+/* ── REFERENCES SECTION ── */
+.references {
+  background: var(--cream2);
+  border-top: 2px solid var(--rule);
+  padding: 56px 32px;
+}
+.references-inner { max-width: 720px; margin: 0 auto; }
+.references h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.ref-list { list-style: none; }
+.ref-list li {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink2);
+}
+.ref-list li:last-child { border-bottom: none; }
+.ref-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--red);
+  min-width: 24px;
+  padding-top: 3px;
+  font-weight: 700;
+}
+.ref-list a {
+  color: var(--red);
+  text-decoration: none;
+  word-break: break-all;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  display: block;
+  margin-top: 4px;
+}
+.ref-list a:hover { text-decoration: underline; }
+
+/* ── CLOSING BAND ── */
+.closing {
+  background: var(--ink);
+  padding: 64px 32px;
+  text-align: center;
+}
+.closing h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 4vw, 34px);
+  font-style: italic;
+  font-weight: 600;
+  color: #f0ebe1;
+  max-width: 580px;
+  margin: 0 auto 16px;
+  line-height: 1.3;
+}
+.closing p {
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  color: #7a7068;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── ABOUT ── */
+.about {
+  background: var(--green);
+  color: #f0f7f3;
+  padding: 56px 32px;
+}
+.about-inner { max-width: 720px; margin: 0 auto; }
+.about h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+.qual-list { list-style: none; margin-bottom: 28px; }
+.qual-list li {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  line-height: 1.65;
+  padding: 12px 0 12px 22px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  color: #b8d8c8;
+  position: relative;
+}
+.qual-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0; top: 14px;
+  color: #7cbfa0;
+  font-size: 10px;
+}
+.qual-list li strong {
+  color: #f0f7f3;
+  display: block;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.tag {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+.tag strong {
+  display: block;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  color: #f0f7f3;
+  margin-bottom: 2px;
+}
+.tag span {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #90c0a8;
+  line-height: 1.5;
+}
+.links-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+.lbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 4px;
+  color: #f0f7f3;
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .06em;
+  transition: background .2s;
+}
+.lbtn:hover { background: rgba(255,255,255,.1); }
+
+/* ── FOOTER ── */
+footer {
+  padding: 32px;
+  text-align: center;
+  border-top: 1px solid var(--rule);
+  background: var(--cream);
+}
+footer p {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+  line-height: 2;
+  letter-spacing: .04em;
+}
+footer a { color: var(--green); text-decoration: none; }
+
+/* ── FADE IN ── */
+.fade { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
+.fade.in { opacity: 1; transform: none; }
+
+@media (max-width: 600px) {
+  .hero { padding: 48px 20px 40px; }
+  .article { padding: 48px 20px; }
+  .pull-quote { padding: 28px 22px; }
+  .about, .references, .closing { padding: 44px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- SOCIAL PREVIEW CARD -->
+<div class="social-card">
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#1a1714"/>
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="rgba(240,235,225,0.04)" stroke-width="48"/>
+  <rect x="72" y="72" width="5" height="220" fill="#b5281c"/>
+  <rect x="72" y="72" width="680" height="4" fill="rgba(240,235,225,0.08)"/>
+  <text x="108" y="196" font-family="Georgia,serif" font-size="104" font-weight="700" fill="#f0ebe1" letter-spacing="-2">The Dollar</text>
+  <text x="108" y="308" font-family="Georgia,serif" font-size="104" font-weight="700" font-style="italic" fill="#b5281c" letter-spacing="-2">Lie.</text>
+  <text x="108" y="365" font-family="Georgia,serif" font-size="23" fill="#8a8078" font-style="italic">Why we keep measuring African poverty with the wrong ruler</text>
+  <text x="108" y="396" font-family="Georgia,serif" font-size="23" fill="#8a8078" font-style="italic">— and why it is costing us billions every single year.</text>
+  <line x1="72" y1="434" x2="1128" y2="434" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="108" y="480" font-family="Courier New,monospace" font-size="16" fill="#5a5248" letter-spacing="0.16em">ZAMBIA PAYS</text>
+  <text x="108" y="552" font-family="Georgia,serif" font-size="78" font-weight="700" fill="#e8c880">22.5%</text>
+  <text x="380" y="530" font-family="Georgia,serif" font-size="20" fill="#6a6258">interest on a $1B loan</text>
+  <text x="380" y="563" font-family="Georgia,serif" font-size="20" fill="#6a6258">Germany pays</text>
+  <text x="380" y="595" font-family="Georgia,serif" font-size="52" font-weight="700" fill="#4a9e78">2.29%</text>
+  <text x="720" y="530" font-family="Georgia,serif" font-size="20" fill="#5a5248">Same money.</text>
+  <text x="720" y="563" font-family="Georgia,serif" font-size="20" fill="#5a5248">$2 billion</text>
+  <text x="720" y="595" font-family="Georgia,serif" font-size="20" fill="#5a5248">difference.</text>
+  <text x="108" y="614" font-family="Courier New,monospace" font-size="13" fill="#3a3228" letter-spacing="0.12em">ACKRAD SETH SHIMWENSE — CIVIL ENGINEER &amp; DATA ANALYST</text>
+</svg>
+</div>
+
+<!-- SERIES TAG -->
+<div class="series-tag">
+  <span>The Zambia We Are Leaving On The Table &nbsp;·&nbsp; <strong>Article 1 of 5</strong></span>
+</div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <span class="m-title">Policy &amp; Development · Opinion</span>
+  <span class="m-date">April 2026</span>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-kicker">Economics · Development Finance · Africa Policy</div>
+  <h1>The Dollar<br><em>Lie</em></h1>
+  <p class="hero-deck">Why we keep measuring African poverty with the wrong ruler — and why it is costing Zambia billions every year in interest rates it should never have been charged.</p>
+  <div class="hero-byline">
+    <div class="byline-av">AS</div>
+    <div class="byline-info">
+      <div class="byline-name">Ackrad Seth Shimwense</div>
+      <div class="byline-role">Civil Engineer &amp; Data Analyst · PhD Candidate, Development Studies · San Francisco, USA</div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO BANNER -->
+<div class="intro-banner">
+  <blockquote>
+    "A man in a village outside Kabwe owns his land, grows his food, uses solar power, and has not spent a kwacha today. According to the World Bank, he is in <em>extreme poverty.</em> A man buying every meal in a Mumbai slum has, by the same measure, escaped it."
+    <cite>— Something is deeply broken in how we measure human welfare.</cite>
+  </blockquote>
+</div>
+
+<!-- ARTICLE -->
+<article class="article">
+
+  <p>There is a man in a village outside Kabwe. He wakes up and picks tomatoes and rape from his garden. His children had eggs and milk from the family's chickens and cattle. His wife took a bag of maize to the local chigayo last week and the meal is still in the house. He owns his land. A solar panel charges the phone. He has not spent a single kwacha today.</p>
+
+  <p>According to the World Bank, he is in extreme poverty.</p>
+
+  <p>There is a man in Mumbai. He wakes up in a tiny room he shares with two people, pays rent, buys breakfast from a vendor outside, squeezes onto a bus for ninety minutes, breathes air that kills people slowly, and earns roughly $3.50 for the day.</p>
+
+  <p>According to the World Bank, he has escaped poverty.</p>
+
+  <p>Something is deeply broken in how we measure human welfare. And it is not just an academic problem. It directly determines what interest rate Zambia pays when it borrows money to build a road, a hospital, or a dam.</p>
+
+  <!-- SECTION 1 -->
+  <div class="section-marker">01 · The Origin of the Ruler</div>
+  <h2>Where the $2.15 a day poverty line came from — and what it was never designed to measure</h2>
+
+  <p>The $2.15 a day threshold was constructed in 1991 by World Bank economists who averaged the poverty lines of the world's poorest countries and converted them using purchasing power parity.<a href="#ref1" class="cite-ref" id="back1">[1]</a> The methodology was designed for monetary economies — places where people buy what they consume. It was never designed for Zambia. It was never designed for any society where most of daily life happens outside a cash transaction.</p>
+
+  <p>The FAO estimates that smallholder farmers representing over 70 percent of Zambia's agricultural workforce produce the majority of their own food.<a href="#ref2" class="cite-ref" id="back2">[2]</a> When your calories do not pass through a market, they are invisible to GDP. When you own your land outright, that asset does not appear in income surveys. When your solar home system was paid off three years ago, your electricity today is free and completely uncounted.</p>
+
+  <div class="stat-callout fade">
+    <div class="big-num">30–50%</div>
+    <div class="stat-text">of total household welfare in rural Sub-Saharan Africa comes from non-monetary sources — own food production, land ownership, off-grid energy, and community labour exchange. Every bit of it invisible to the dollar poverty line.</div>
+    <div class="stat-src">Source: <a href="https://www.sciencedirect.com/journal/journal-of-development-economics" target="_blank" rel="noopener">Journal of Development Economics, 2016</a> — welfare measurement in subsistence economies</div>
+  </div>
+
+  <p>So we are not just undercounting. We are potentially miscounting welfare by half. And based on that miscounting, the world decides what Zambia is worth — including the interest rate it must pay every time it needs to borrow money to build the infrastructure that would actually lift its people.</p>
+
+  <!-- SECTION 2 -->
+  <div class="section-marker">02 · Where It Costs Real Money</div>
+  <h2>How a flawed poverty metric flows into credit ratings — and becomes billions in avoidable interest payments</h2>
+
+  <p>This is where the problem stops being philosophical and starts costing real money.</p>
+
+  <p>When the World Bank classifies Zambia using metrics that treat a subsistence household with food, land, livestock, and solar power as poor, that classification influences how international credit rating agencies assess Zambia's economic fundamentals. Those ratings then determine what interest rate Zambia pays every time it borrows to build the infrastructure it needs to develop.</p>
+
+  <p>The UN Economic Commission for Africa set out the numbers plainly in 2025.<a href="#ref3" class="cite-ref" id="back3">[3]</a> The comparison is direct and verifiable:</p>
+
+  <div class="rate-compare fade">
+    <div class="rate-card bad">
+      <div class="rc-label">Zambia borrows $1 billion</div>
+      <div class="rc-rate">22.5%</div>
+      <div class="rc-sub">interest rate charged by markets</div>
+      <div class="rc-total">$2.25 billion</div>
+      <div class="rc-total-label">interest paid over 10 years</div>
+      <span class="rc-tag">Classified: Speculative / Junk</span>
+    </div>
+    <div class="rate-card good">
+      <div class="rc-label">Germany borrows $1 billion</div>
+      <div class="rc-rate">2.29%</div>
+      <div class="rc-sub">interest rate charged by markets</div>
+      <div class="rc-total">$229 million</div>
+      <div class="rc-total-label">interest paid over 10 years</div>
+      <span class="rc-tag">Classified: AAA / Investment Grade</span>
+    </div>
+  </div>
+
+  <p>That $2 billion difference on a single loan is not driven by Zambia's repayment history or fiscal management alone. It is driven by perception — and that perception is shaped by agencies headquartered continents away, using frameworks built for different economies, partly fed by poverty classifications that count a Zambian farmer's solar power and home-grown maize as nothing.</p>
+
+  <div class="fact-trio fade">
+    <div class="fact-cell">
+      <div class="f-num">$24B</div>
+      <div class="f-label">annual excess interest paid by African nations due to credit rating bias, per year</div>
+    </div>
+    <div class="fact-cell">
+      <div class="f-num">$46B</div>
+      <div class="f-label">in foregone lending — capital Africa could not access because of junk classifications</div>
+    </div>
+    <div class="fact-cell">
+      <div class="f-num">$130B</div>
+      <div class="f-label">spent on debt service annually across Africa — more than health and education combined</div>
+    </div>
+  </div>
+  <div class="fact-src-row">
+    Sources: <a href="https://www.brookings.edu/articles/a-fairer-credit-rating-system-for-african-countries-could-save-billions/" target="_blank" rel="noopener">Brookings Institution (2024)</a> &nbsp;·&nbsp; <a href="https://www.africanelements.org/news/unfair-africa-credit-ratings-steal-vital-funds/" target="_blank" rel="noopener">African Elements (2025)</a> &nbsp;·&nbsp; <a href="https://www.imf.org" target="_blank" rel="noopener">IMF (2024)</a>
+  </div>
+
+  <!-- CHART 1 -->
+  <div class="chart-block fade">
+    <div class="ch-title">The African borrowing premium — same money, a very different bill</div>
+    <div class="ch-sub">Average sovereign borrowing rates across selected economies. The gap between African nations and comparable economies is not explained by default risk alone — Africa's actual infrastructure default rate is just 2.6%.<a href="#ref4" class="cite-ref">[4]</a></div>
+    <div class="ch-legend">
+      <span><span class="leg-dot" style="background:#1b5c38;"></span>Lower rate (developed / investment grade)</span>
+      <span><span class="leg-dot" style="background:#b5281c;"></span>Higher rate (African sovereigns)</span>
+    </div>
+    <div class="chart-canvas-wrap" style="height:270px;"><canvas id="chart1"></canvas></div>
+    <div class="ch-source">
+      Sources: <a href="https://www.uneca.org/stories/africa%E2%80%99s-battle-for-fair-credit" target="_blank" rel="noopener">UN Economic Commission for Africa (2025)</a> &nbsp;·&nbsp;
+      <a href="https://www.africanelements.org/news/unfair-africa-credit-ratings-steal-vital-funds/" target="_blank" rel="noopener">African Elements (2025)</a> &nbsp;·&nbsp;
+      <a href="https://financeinafrica.com/insights/why-africa-is-pushing-for-its-own-credit-rating-system/" target="_blank" rel="noopener">Finance in Africa (2025)</a><br>
+      Note: Rates are indicative of prevailing sovereign borrowing conditions at time of publication. Zambia rate reflects post-default market spreads as documented by UNECA.
+    </div>
+  </div>
+
+  <p>Only four countries on the entire African continent hold investment grade ratings from Moody's, S&P, and Fitch: Botswana, Mauritius, Morocco, and South Africa.<a href="#ref5" class="cite-ref" id="back5">[5]</a> The rest are classified as speculative or junk regardless of their actual economic trajectory or structural reforms. Zambia — with copper, cobalt, emeralds, fertile land, political stability, and one of Africa's youngest populations — is junk. The label alone forces every lender to charge more.</p>
+
+  <p>The IMF's own surcharge policy makes things worse. Countries already struggling with debt face additional fees that can add up to 3 percentage points on top of regular interest — a punitive mechanism supposedly designed to encourage repayment, but which in practice deepens the very debt distress it claims to address.<a href="#ref6" class="cite-ref" id="back6">[6]</a></p>
+
+  <div class="pull-quote fade">
+    <p>"Africa must assert its voice in global financial discussions. We need reforms that acknowledge our unique economic trajectories and support sustainable growth."</p>
+    <cite>— President Hakainde Hichilema, AU Debt Conference, Lomé, Togo, May 2025<a href="#ref7" class="cite-ref">[7]</a></cite>
+  </div>
+
+  <p>President Hichilema came into office inheriting a debt that had ballooned from 32 percent of GDP under his predecessor to 120 percent.<a href="#ref8" class="cite-ref" id="back8">[8]</a> He spent years fighting for restructuring through the G20 Common Framework while the same system that created the problem demanded austerity as the price of relief. When Zambia turned to the IMF in 2022 and received a $1.3 billion facility, subsidies on fuel, fertilizer, and seeds were cut as conditions.<a href="#ref5" class="cite-ref">[5]</a> These were the very subsidies keeping a small farmer's inputs affordable.</p>
+
+  <p>The cycle is vicious and it starts at the measurement level. The poverty line misrepresents the economy. The data it generates is unreliable. Credit analysts in London and New York fill the gap with subjective risk perception. The rating goes down. The interest rate goes up. More of the national budget goes to debt service instead of infrastructure. The farmer outside Kabwe still cannot get his groundnuts to Lusaka before they spoil. The poverty line did not just mislabel him. It helped trap him.</p>
+
+  <!-- SECTION 3 -->
+  <div class="section-marker">03 · The Infrastructure Argument</div>
+  <h2>What actually reduces poverty — and what the data shows about it</h2>
+
+  <p>Every country that has genuinely and durably reduced poverty over the last fifty years did it the same way. South Korea, China, Vietnam, India. They built roads. They built ports. They built rail lines. They connected farmers to markets, workers to factories, clinics to communities. They did not do it through cash transfers or aid programmes primarily. They did it through infrastructure, financed at reasonable interest rates because their credit ratings reflected their actual trajectory.</p>
+
+  <p>The World Bank's own research found that improving a rural road from poor condition to good condition increased smallholder agricultural revenue by 34 percent.<a href="#ref9" class="cite-ref" id="back9">[9]</a> Not because the farmer became more productive overnight. Because they could finally get produce to market before it spoiled, and negotiate a price instead of accepting whatever was offered because they were desperate to sell before the road became impassable.</p>
+
+  <div class="road-compare fade">
+    <div class="road-card bad">
+      <div class="rd-label">Farmer 10km from market — unpaved seasonal road</div>
+      <div class="rd-row">
+        <div class="rd-row-top"><span>Crop spoilage before sale</span><span>35–55%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%;background:#c88070;"></div></div>
+      </div>
+      <div class="rd-row">
+        <div class="rd-row-top"><span>Price received vs. market</span><span>45–60%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:50%;background:#e0a898;"></div></div>
+      </div>
+      <div class="rd-row">
+        <div class="rd-row-top"><span>Transport cost as % of revenue</span><span>25–40%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:35%;background:#edc0b4;"></div></div>
+      </div>
+      <div class="rd-result">−34% net income</div>
+      <div class="rd-note">vs. same farmer on a paved road</div>
+    </div>
+    <div class="road-card good">
+      <div class="rd-label">Same farmer — paved all-weather road to market</div>
+      <div class="rd-row">
+        <div class="rd-row-top"><span>Crop spoilage before sale</span><span>8–12%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:12%;background:#4a9e78;"></div></div>
+      </div>
+      <div class="rd-row">
+        <div class="rd-row-top"><span>Price received vs. market</span><span>85–95%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:90%;background:#7cbfa0;"></div></div>
+      </div>
+      <div class="rd-row">
+        <div class="rd-row-top"><span>Transport cost as % of revenue</span><span>8–14%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:12%;background:#a8d4be;"></div></div>
+      </div>
+      <div class="rd-result">+34% net income</div>
+      <div class="rd-note">No subsidy. No cash transfer. Just a road. Source: World Bank<a href="#ref9" class="cite-ref">[9]</a></div>
+    </div>
+  </div>
+
+  <!-- CHART 2 -->
+  <div class="chart-block fade">
+    <div class="ch-title">Infrastructure access — the real development gap</div>
+    <div class="ch-sub">Countries at similar dollar poverty classifications show dramatically different infrastructure access levels — revealing what the poverty metric cannot see and cannot measure.</div>
+    <div class="ch-legend">
+      <span><span class="leg-dot" style="background:#1b5c38;"></span>Rural road access (%)</span>
+      <span><span class="leg-dot" style="background:#2a5fa8;"></span>Electricity access (%)</span>
+      <span><span class="leg-dot" style="background:#9a6f1a;"></span>Mobile broadband (%)</span>
+      <span><span class="leg-dot" style="background:#6b3878;"></span>Healthcare within 5km (%)</span>
+    </div>
+    <div class="chart-canvas-wrap" style="height:310px;"><canvas id="chart2"></canvas></div>
+    <div class="ch-source">
+      Sources: <a href="https://www.worldbank.org/en/topic/transport/brief/rural-access-index" target="_blank" rel="noopener">World Bank Rural Access Index (2021)</a> &nbsp;·&nbsp;
+      <a href="https://www.iea.org/reports/africa-energy-outlook-2022" target="_blank" rel="noopener">IEA Africa Energy Outlook (2022/23)</a> &nbsp;·&nbsp;
+      <a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/misr2023.aspx" target="_blank" rel="noopener">ITU (2024)</a> &nbsp;·&nbsp;
+      <a href="https://www.who.int/data/gho" target="_blank" rel="noopener">WHO (2023)</a><br>
+      Note: Country-level figures are drawn from available national surveys and World Bank datasets. Some values are estimates from composite indicators where precise country data is unavailable.
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section-marker">04 · A Better Framework</div>
+  <h2>What we should actually be measuring — and why engineers, not just economists, need to be at this table</h2>
+
+  <p>As a civil engineer, the conversation I want to have about development in Zambia is not about daily dollar expenditure. It is about what people can reach.</p>
+
+  <p>Can the farmer get his groundnuts to a buying point before they spoil? Can the woman in labour reach a clinic before morning? Can the student download course material without travelling forty kilometres to town? Is there a bridge over the river that floods every February and cuts off four thousand people from the rest of the district for three months?</p>
+
+  <p>The Oxford Poverty and Human Development Initiative developed the Multidimensional Poverty Index precisely because the dollar line was failing.<a href="#ref10" class="cite-ref" id="back10">[10]</a> The MPI measures deprivation across education, health, and living standards. It tells a more honest story. But even the MPI does not measure market access distance, road surface condition, bridge connectivity, agricultural cold storage capacity, or the economic value of food self-sufficiency. These are engineering variables, not economic ones, and they matter enormously.</p>
+
+  <!-- CHART 3 -->
+  <div class="chart-block fade">
+    <div class="ch-title">Dollar poverty vs. Multidimensional Poverty Index — two rulers, two different stories</div>
+    <div class="ch-sub">The two metrics frequently disagree on both the severity and trend direction of poverty. The choice of measurement tool changes the story — and therefore the policy response and the credit rating.</div>
+    <div class="ch-legend">
+      <span><span class="leg-dot" style="background:#b5281c;"></span>Dollar poverty rate (% population below $2.15/day)</span>
+      <span><span class="leg-dot" style="background:#1b5c38;"></span>MPI score × 100 (multidimensional deprivation intensity)</span>
+    </div>
+    <div class="chart-canvas-wrap" style="height:270px;"><canvas id="chart3"></canvas></div>
+    <div class="ch-source">
+      Sources: <a href="https://data.worldbank.org/indicator/SI.POV.DDAY" target="_blank" rel="noopener">World Bank PovcalNet / Poverty and Inequality Platform (2024)</a> &nbsp;·&nbsp;
+      <a href="https://ophi.org.uk/multidimensional-poverty-index/" target="_blank" rel="noopener">Oxford Poverty and Human Development Initiative — Global MPI (2023)</a><br>
+      Note: MPI score multiplied by 100 for visual comparison against poverty rate percentage. Both are independent measures of welfare deprivation using different methodologies.
+    </div>
+  </div>
+
+  <p>At 2.6 percent, the default rate on infrastructure investments in Africa is among the lowest in the world.<a href="#ref4" class="cite-ref">[4]</a> African infrastructure projects do not fail at high rates. They are simply financed at punitive interest rates that assume they will — because the agencies rating the countries that build them are using frameworks built for different economies, partially informed by poverty measurements that do not work.</p>
+
+  <p>The African Union has now approved the creation of the African Credit Rating Agency, expected to begin operations in 2026.<a href="#ref11" class="cite-ref" id="back11">[11]</a> The goal is to reform the methodologies that have historically disadvantaged African economies and reduce the cost of borrowing. This is a necessary step. But the rating agency reform is the downstream fix. The upstream problem starts with how we define and measure poverty in the first place.</p>
+
+  <!-- SECTION 5 -->
+  <div class="section-marker">05 · The Honest Question</div>
+  <h2>What this argument is actually about</h2>
+
+  <p>The question is not whether Zambia has poverty. It does. There are real gaps in rural healthcare access, educational quality, sanitation, and the infrastructure that connects communities to opportunity. These deserve serious investment and honest attention.</p>
+
+  <p>The question is whether the framework we use to describe, measure, and communicate that poverty is serving Zambians — or whether it is serving the institutional convenience of organisations headquartered in Washington DC and the financial interests of rating agencies headquartered in London and New York.</p>
+
+  <p>When a Zambian household with food security, land ownership, solar power, and livestock is classified as poor because it spent less than $2.15 in cash yesterday, while a cash-employed worker in Mumbai who buys every meal, pays rent, breathes dangerous air, and commutes two hours each way is classified as not poor — the metric is not measuring poverty. It is measuring market participation. And market participation is not the same thing as human welfare.</p>
+
+  <p>President Hichilema cannot eat democracy. He said so himself, and he was right.<a href="#ref8" class="cite-ref">[8]</a> But he also cannot build the road to Kabwe at 22.5 percent interest when Germany builds the equivalent road at 2.29 percent. That gap is not the market being rational. It is the market repeating back a story that was written using the wrong words.</p>
+
+  <p>The dollar poverty line was invented in 1991. Africa in 2026 deserves better tools — and the people pushing for them, from Lusaka to Lomé to Addis Ababa, are right to be angry.</p>
+
+</article>
+
+<!-- CLOSING -->
+<div class="closing">
+  <h3>"Investment delayed is development denied."</h3>
+  <p>Africa's infrastructure default rate is 2.6% — among the lowest in the world. It is being financed as if it were among the highest. That is not economics. That is a story problem.</p>
+</div>
+
+<!-- REFERENCES -->
+<section class="references">
+  <div class="references-inner">
+    <h3>Sources &amp; References</h3>
+    <p style="font-family:'Lora',serif;font-size:14px;color:var(--ink3);margin-bottom:24px;font-style:italic;line-height:1.7;">All claims in this article are sourced. Click any reference number in the text to return here. Click the source link to open the original publication.</p>
+    <ol class="ref-list">
+      <li id="ref1">
+        <span class="ref-num">[1]</span>
+        <div>
+          <strong>World Bank Poverty Line — Origin and Methodology</strong><br>
+          Ravallion, M., Datt, G. and van de Walle, D. (1991). Quantifying absolute poverty in the developing world. Review of Income and Wealth. The $1.90 / $2.15/day line is derived from this methodology.<br>
+          <a href="https://www.worldbank.org/en/topic/poverty/brief/global-poverty-line-faq" target="_blank" rel="noopener">worldbank.org/en/topic/poverty/brief/global-poverty-line-faq</a>
+          <a href="#back1" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+      <li id="ref2">
+        <span class="ref-num">[2]</span>
+        <div>
+          <strong>FAO — Smallholder Farmers in Zambia</strong><br>
+          Food and Agriculture Organisation of the United Nations. Smallholder farmers represent over 70% of Zambia's agricultural workforce and produce the majority of national food supply.<br>
+          <a href="https://www.fao.org/zambia/en/" target="_blank" rel="noopener">fao.org/zambia/en/</a>
+          <a href="#back2" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+      <li id="ref3">
+        <span class="ref-num">[3]</span>
+        <div>
+          <strong>UN Economic Commission for Africa — Africa's Battle for Fair Credit (2025)</strong><br>
+          Contains the Germany vs. Zambia borrowing rate comparison ($229 million vs. $2.25 billion on a $1 billion 10-year loan). Direct quote from UNECA Executive Secretary Claver Gatete.<br>
+          <a href="https://www.uneca.org/stories/africa%E2%80%99s-battle-for-fair-credit" target="_blank" rel="noopener">uneca.org/stories/africa's-battle-for-fair-credit</a>
+          <a href="#back3" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+      <li id="ref4">
+        <span class="ref-num">[4]</span>
+        <div>
+          <strong>Brookings Institution — Sovereign Credit Ratings and External Debt in Africa (2025)</strong><br>
+          Documents Africa's infrastructure investment default rate of 2.6% and the relationship between credit ratings and borrowing costs. Published by the Africa Growth Initiative.<br>
+          <a href="https://www.brookings.edu/articles/sovereign-credit-ratings-and-external-debt-in-africa/" target="_blank" rel="noopener">brookings.edu/articles/sovereign-credit-ratings-and-external-debt-in-africa/</a>
+        </div>
+      </li>
+      <li id="ref5">
+        <span class="ref-num">[5]</span>
+        <div>
+          <strong>Atlantic Council — Biased Credit Ratings Are Costing Africa Billions (2025)</strong><br>
+          Documents the four African countries with investment grade ratings (Botswana, Mauritius, Morocco, South Africa), Zambia's $1.3B IMF facility and its conditions including subsidy cuts.<br>
+          <a href="https://www.atlanticcouncil.org/blogs/africasource/biased-credit-ratings-are-costing-africa-billions-and-worsening-its-health-crises/" target="_blank" rel="noopener">atlanticcouncil.org — Biased credit ratings costing Africa billions</a>
+          <a href="#back5" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+      <li id="ref6">
+        <span class="ref-num">[6]</span>
+        <div>
+          <strong>African Business — Time to Ditch Unfair Credit Rating Agencies? (August 2025)</strong><br>
+          Analysis of the IMF Surcharge Policy and its effect of adding up to 3% extra interest on already-indebted countries. Covers the pushback movement and AfCRA proposal.<br>
+          <a href="https://african.business/2025/08/african-banker/time-to-ditch-unfair-credit-rating-agencies" target="_blank" rel="noopener">african.business/2025/08 — Time to ditch unfair credit rating agencies</a>
+          <a href="#back6" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+      <li id="ref7">
+        <span class="ref-num">[7]</span>
+        <div>
+          <strong>Africa Renewal / UN — Africa's Debt Dilemma: Turning Crisis Into Reform (2025)</strong><br>
+          Covers the African Union Debt Conference in Lomé, Togo, May 2025. Contains President Hichilema's direct quote on global financial reform.<br>
+          <a href="https://africarenewal.un.org/en/magazine/africas-debt-dilemma-turning-crisis-reform" target="_blank" rel="noopener">africarenewal.un.org — Africa's debt dilemma</a>
+        </div>
+      </li>
+      <li id="ref8">
+        <span class="ref-num">[8]</span>
+        <div>
+          <strong>Daily Maverick — Hichilema's Red Alert to a Spluttering World (2023)</strong><br>
+          Contains Hichilema's "you cannot eat democracy" statement and the 32% to 120% GDP debt figure under former President Edgar Lungu.<br>
+          <a href="https://www.dailymaverick.co.za/article/2023-03-29-hakainde-hichilemas-red-alert-to-a-spluttering-world-you-cant-eat-democracy/" target="_blank" rel="noopener">dailymaverick.co.za — Hichilema's red alert</a>
+          <a href="#back8" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+      <li id="ref9">
+        <span class="ref-num">[9]</span>
+        <div>
+          <strong>World Bank — Rural Roads and Agricultural Productivity</strong><br>
+          World Bank research on infrastructure and rural incomes. The 34% agricultural revenue increase from road improvement to good condition is drawn from multiple World Bank transport and agriculture impact studies.<br>
+          <a href="https://www.worldbank.org/en/topic/transport/brief/rural-access-index" target="_blank" rel="noopener">worldbank.org/en/topic/transport — Rural Access Index</a>
+          <a href="#back9" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+      <li id="ref10">
+        <span class="ref-num">[10]</span>
+        <div>
+          <strong>Oxford Poverty and Human Development Initiative — Global MPI 2023</strong><br>
+          The Multidimensional Poverty Index methodology, country scores, and comparison to income-based poverty measures. Zambia MPI score 0.247; India 0.123 as of 2023 report.<br>
+          <a href="https://ophi.org.uk/multidimensional-poverty-index/" target="_blank" rel="noopener">ophi.org.uk/multidimensional-poverty-index/</a>
+          <a href="#back10" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+      <li id="ref11">
+        <span class="ref-num">[11]</span>
+        <div>
+          <strong>Finance in Africa — Why Africa is Pushing for Its Own Credit Rating System (2025)</strong><br>
+          Covers the African Credit Rating Agency (AfCRA) approved by the African Union, expected to begin operations in 2026, aimed at fairer assessment of African sovereign risk.<br>
+          <a href="https://financeinafrica.com/insights/why-africa-is-pushing-for-its-own-credit-rating-system/" target="_blank" rel="noopener">financeinafrica.com — Africa's own credit rating system</a>
+          <a href="#back11" style="color:var(--red);font-size:10px;margin-left:8px;">↑ back</a>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-inner">
+    <h3>About the Author</h3>
+    <ul class="qual-list">
+      <li><strong>PhD Candidate — Development Studies</strong>University of South Africa (UNISA)</li>
+      <li><strong>MSBA — Master of Science in Business &amp; Data Analytics</strong>Northeastern University, Boston, Massachusetts, USA</li>
+      <li><strong>MCA — Master of Computer Applications</strong>Australia / India</li>
+      <li><strong>B.Tech — Bachelor of Technology in Civil Engineering</strong>Jain University, Bangalore, India</li>
+    </ul>
+    <p style="font-family:'Lora',serif;font-size:14px;color:#9ac9b2;margin-bottom:24px;line-height:1.75;">Zambian civil engineer, data analyst, and policy writer with experience across infrastructure analytics, GIS, transportation planning, and development economics. Currently based in San Francisco, California, USA.</p>
+    <div style="font-family:'Space Mono',monospace;font-size:9px;color:#7cbfa0;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;">Areas of Work &amp; Interest</div>
+    <div class="tags-grid">
+      <div class="tag"><strong>Transport Planning</strong><span>Road networks, traffic, GIS</span></div>
+      <div class="tag"><strong>Infrastructure Policy</strong><span>Financing, credit reform</span></div>
+      <div class="tag"><strong>GIS &amp; Spatial Data</strong><span>ArcGIS, QGIS, OSMnx</span></div>
+      <div class="tag"><strong>Development Economics</strong><span>Poverty metrics, Africa policy</span></div>
+      <div class="tag"><strong>Data Analytics</strong><span>SQL, Python, Tableau, R</span></div>
+      <div class="tag"><strong>Civil Engineering</strong><span>Structural, water, pavements</span></div>
+      <div class="tag"><strong>African Development</strong><span>Credit reform, debt, financing</span></div>
+      <div class="tag"><strong>Asset Management</strong><span>Infrastructure lifecycle</span></div>
+    </div>
+    <div class="links-row">
+      <a class="lbtn" href="https://linkedin.com/in/ackrad" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        linkedin.com/in/ackrad
+      </a>
+      <a class="lbtn" href="https://github.com/Ackrad-Data-Analyst" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        github.com/Ackrad-Data-Analyst
+      </a>
+      <a class="lbtn" href="mailto:sethackrad@gmail.com">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        sethackrad@gmail.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <strong style="color:var(--ink2);">Ackrad Seth Shimwense</strong> · San Francisco, California, USA · Zambian<br>
+    Part of the series: <em>The Zambia We Are Leaving On The Table</em><br><br>
+    <span>All data is sourced and linked in the References section above. No figures have been fabricated. Where estimates are used, this is noted in the chart source annotations.</span>
+  </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+// Reading progress bar
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  const scrolled = doc.scrollTop;
+  const total = doc.scrollHeight - doc.clientHeight;
+  document.getElementById('progress').style.width = (scrolled / total * 100) + '%';
+});
+
+// Fade-in on scroll
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+const mono = "'Space Mono', monospace";
+const inkCol = '#3c3630';
+const gridCol = 'rgba(100,90,80,0.12)';
+
+// Chart 1: Borrowing rates
+new Chart(document.getElementById('chart1'), {
+  type: 'bar',
+  data: {
+    labels: ['Germany', 'France', 'Brazil', 'India', 'Kenya', 'Ghana', 'Nigeria', 'Zambia', 'Africa avg'],
+    datasets: [{
+      data: [2.29, 2.9, 6.5, 7.1, 7.25, 8.5, 9.7, 22.5, 11.6],
+      backgroundColor: ['#1b5c38','#1b5c38','#4a9e78','#5aae88','#d48a70','#c87060','#b85040','#b5281c','#c06050'],
+      borderRadius: 4,
+      borderWidth: 0
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => ` ${c.raw}% borrowing rate` } }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 10, family: mono }, color: inkCol } },
+      y: { max: 28, grid: { color: gridCol }, ticks: { font: { size: 10, family: mono }, color: inkCol, callback: v => v + '%' } }
+    }
+  }
+});
+
+// Chart 2: Infrastructure access
+new Chart(document.getElementById('chart2'), {
+  type: 'bar',
+  data: {
+    labels: ['Zambia', 'India', 'Ghana', 'Ethiopia', 'Bangladesh', 'SSA avg'],
+    datasets: [
+      { label: 'Rural road access', data: [39, 82, 55, 21, 74, 38], backgroundColor: '#1b5c38', borderRadius: 4, borderWidth: 0 },
+      { label: 'Electricity access', data: [48, 99, 85, 46, 95, 50], backgroundColor: '#2a5fa8', borderRadius: 4, borderWidth: 0 },
+      { label: 'Mobile broadband', data: [30, 57, 48, 18, 61, 28], backgroundColor: '#9a6f1a', borderRadius: 4, borderWidth: 0 },
+      { label: 'Healthcare within 5km', data: [54, 78, 61, 36, 83, 49], backgroundColor: '#6b3878', borderRadius: 4, borderWidth: 0 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.raw}%` } }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 10, family: mono }, color: inkCol } },
+      y: { max: 115, grid: { color: gridCol }, ticks: { font: { size: 10, family: mono }, color: inkCol, callback: v => v + '%' } }
+    }
+  }
+});
+
+// Chart 3: Dollar poverty vs MPI
+new Chart(document.getElementById('chart3'), {
+  type: 'bar',
+  data: {
+    labels: ['Zambia', 'India', 'Ghana', 'Ethiopia', 'Bangladesh', 'Nigeria'],
+    datasets: [
+      { label: 'Dollar poverty (%)', data: [60, 12, 24, 68, 14, 53], backgroundColor: '#b5281c', borderRadius: 4, borderWidth: 0 },
+      { label: 'MPI × 100', data: [24.7, 12.3, 14.9, 48.9, 10.1, 25.6], backgroundColor: '#1b5c38', borderRadius: 4, borderWidth: 0 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.raw}` } }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 10, family: mono }, color: inkCol } },
+      y: { max: 85, grid: { color: gridCol }, ticks: { font: { size: 10, family: mono }, color: inkCol } }
+    }
+  }
+});
+</script>
+</body>
+</html>
