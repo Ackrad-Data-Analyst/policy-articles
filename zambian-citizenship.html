@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Being Zambian Should Mean Something">
+<meta property="og:description" content="Zambia is being hollowed out from two directions at once. Foreigners enter freely, buy K500 NRCs, and take land that belongs to citizens. Meanwhile Zambians leave — to the UAE, the UK, the Gulf — because the system at home stopped protecting them. Both problems have the same cause. And the same solution.">
+<meta property="og:image" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Being Zambian Should Mean Something | Ackrad Seth Shimwense</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f5f3ee;--off2:#ede9e0;--off3:#e2ddd4;
+  --ink:#141210;--ink2:#2e2c28;--ink3:#6a6660;
+  --green:#0b4226;--green2:#062818;--green-bg:#eef5f1;
+  --gold:#a87018;--gold-bg:#fef9ee;
+  --red:#8e1a10;--red-bg:#fdf2f0;--rule:#dcd8ce;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:'Lora',Georgia,serif;font-size:18px;line-height:1;overflow-x:hidden}
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--green);width:0%;z-index:200;transition:width .1s linear}
+
+/* SOCIAL CARD */
+.social-card{width:100%;line-height:0;display:block;overflow:hidden}
+.social-card svg{display:block;width:100%;height:auto}
+
+/* SERIES BAR */
+.series-bar{background:var(--green2);text-align:center;padding:11px 20px}
+.series-bar span{font-family:'Space Mono',monospace;font-size:10px;color:#5a9070;letter-spacing:.18em;text-transform:uppercase}
+.series-bar strong{color:#c8c070}
+
+/* MASTHEAD */
+.masthead{background:var(--white);border-bottom:1px solid var(--rule);padding:14px 36px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.m-title{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.m-link{font-family:'Space Mono',monospace;font-size:9px;color:var(--green);text-decoration:none;letter-spacing:.08em}
+.m-link:hover{text-decoration:underline}
+
+/* HERO */
+.hero{max-width:840px;margin:0 auto;padding:80px 36px 60px;border-bottom:2px solid var(--ink)}
+.hero-kicker{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:28px;display:flex;align-items:center;gap:14px}
+.hero-kicker::before{content:'';display:block;width:36px;height:2px;background:var(--green)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,7vw,76px);font-weight:700;line-height:1.0;letter-spacing:-.02em;color:var(--ink);margin-bottom:10px}
+.hero h1 em{color:var(--green);font-style:italic}
+.hero-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.8vw,26px);font-style:italic;color:var(--ink3);margin-bottom:32px;line-height:1.4}
+.hero-deck{font-family:'Lora',serif;font-size:clamp(16px,2vw,19px);font-weight:400;font-style:italic;line-height:1.72;color:var(--ink2);max-width:660px;margin-bottom:40px}
+.hero-byline{display:flex;align-items:center;gap:18px;padding-top:28px;border-top:1px solid var(--rule)}
+.byline-av{width:48px;height:48px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:13px;color:#fff;font-weight:700;flex-shrink:0}
+.byline-info{line-height:1.55}
+.byline-name{font-family:'Lora',serif;font-weight:600;font-size:15px;color:var(--ink)}
+.byline-role{font-family:'Space Mono',monospace;font-size:9px;color:var(--ink3);letter-spacing:.06em;margin-top:3px}
+
+/* INTRO BANNER */
+.intro-banner{background:var(--green2);padding:72px 36px;text-align:center}
+.intro-banner blockquote{max-width:740px;margin:0 auto;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3.2vw,31px);font-weight:600;font-style:italic;line-height:1.44;color:#edeae0}
+.intro-banner blockquote em{color:#c8c070;font-style:normal}
+.intro-banner cite{display:block;margin-top:22px;font-family:'Space Mono',monospace;font-size:10px;color:#405840;font-style:normal;letter-spacing:.1em;text-transform:uppercase}
+
+/* ARTICLE BODY */
+.article{max-width:720px;margin:0 auto;padding:72px 36px}
+.chapter-marker{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);border-top:1px solid var(--rule);padding-top:36px;margin:70px 0 16px}
+.article h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.8vw,36px);font-weight:700;line-height:1.14;color:var(--ink);margin-bottom:32px}
+.article p{font-family:'Lora',serif;font-size:clamp(16px,1.9vw,18px);line-height:1.9;color:var(--ink2);margin-bottom:26px;font-weight:400}
+.cite-ref{font-family:'Space Mono',monospace;font-size:9px;color:var(--green);text-decoration:none;vertical-align:super;line-height:0;margin-left:1px}
+.cite-ref:hover{text-decoration:underline}
+
+/* CALLOUTS */
+.stat-callout{border-left:4px solid var(--green);background:var(--green-bg);padding:30px 36px;margin:44px 0;border-radius:0 6px 6px 0}
+.stat-callout .big-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:700;color:var(--green);line-height:1;margin-bottom:12px}
+.stat-callout .stat-text{font-family:'Lora',serif;font-size:16px;line-height:1.78;color:var(--ink2);font-style:italic}
+.stat-callout .stat-src{margin-top:12px;font-family:'Space Mono',monospace;font-size:9px;color:var(--ink3)}
+.stat-callout .stat-src a{color:var(--green);text-decoration:none}
+
+.red-callout{border-left:4px solid var(--red);background:var(--red-bg);padding:30px 36px;margin:44px 0;border-radius:0 6px 6px 0}
+.red-callout .big-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:700;color:var(--red);line-height:1;margin-bottom:12px}
+.red-callout .stat-text{font-family:'Lora',serif;font-size:16px;line-height:1.78;color:var(--ink2);font-style:italic}
+.red-callout .stat-src{margin-top:12px;font-family:'Space Mono',monospace;font-size:9px;color:var(--ink3)}
+.red-callout .stat-src a{color:var(--red);text-decoration:none}
+
+/* CHARTS */
+.chart-block{background:var(--off);border:1px solid var(--rule);border-radius:6px;padding:32px 28px;margin:44px 0}
+.ch-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.ch-sub{font-family:'Lora',serif;font-size:13px;color:var(--ink3);line-height:1.65;font-style:italic;margin-bottom:22px}
+.ch-legend{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:16px;font-family:'Space Mono',monospace;font-size:10px;color:var(--ink3)}
+.ch-legend span{display:flex;align-items:center;gap:5px}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.chart-canvas-wrap{position:relative;width:100%}
+.ch-source{margin-top:14px;font-family:'Space Mono',monospace;font-size:9px;color:var(--ink3);line-height:1.8}
+.ch-source a{color:var(--green);text-decoration:none}
+
+/* CITY TABLE */
+.city-table{width:100%;border-collapse:collapse;margin:44px 0;font-family:'Lora',serif;font-size:14px}
+.city-table thead tr{background:var(--ink)}
+.city-table thead th{padding:14px 16px;text-align:left;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--off)}
+.city-table tbody tr{border-bottom:1px solid var(--rule)}
+.city-table tbody tr:nth-child(even){background:var(--off)}
+.city-table tbody td{padding:12px 16px;color:var(--ink2);line-height:1.55;vertical-align:top}
+.city-table tbody td:first-child{font-weight:600;color:var(--ink)}
+.pill{display:inline-block;font-family:'Space Mono',monospace;font-size:9px;padding:2px 8px;border-radius:3px}
+.pill-high{background:#fdf2f0;color:#7e1610}
+.pill-med{background:#fef9ee;color:#7a5010}
+
+/* CASE LIST */
+.case-list{border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin:44px 0}
+.case-item{padding:22px 26px;background:var(--white);border-bottom:1px solid var(--rule)}
+.case-item:last-child{border-bottom:none}
+.case-item:nth-child(even){background:var(--off)}
+.case-date{font-family:'Space Mono',monospace;font-size:9px;color:var(--green);letter-spacing:.1em;margin-bottom:7px;text-transform:uppercase}
+.case-title{font-family:'Lora',serif;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px;line-height:1.4}
+.case-desc{font-family:'Lora',serif;font-size:13px;color:var(--ink3);line-height:1.72}
+.case-src a{color:var(--green);font-family:'Space Mono',monospace;font-size:9px;text-decoration:none;display:block;margin-top:7px}
+
+/* UAE CARDS */
+.uae-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:44px 0}
+@media(max-width:580px){.uae-grid{grid-template-columns:1fr}}
+.uae-card{background:var(--gold-bg);border:1px solid #e0c080;border-radius:6px;padding:22px;border-top:3px solid var(--gold)}
+.uae-cat{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.uae-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.2}
+.uae-body{font-family:'Lora',serif;font-size:13px;color:var(--ink2);line-height:1.72}
+.uae-src a{color:var(--green);font-family:'Space Mono',monospace;font-size:9px;text-decoration:none;display:block;margin-top:10px}
+
+/* ACHIEVE GRID */
+.achieve-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:44px 0}
+@media(max-width:580px){.achieve-grid{grid-template-columns:1fr}}
+.achieve-card{background:var(--green-bg);border:1px solid #b0d0b8;border-radius:6px;padding:22px;border-top:3px solid var(--green)}
+.ac-cat{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.ac-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--green);line-height:1;margin-bottom:6px}
+.ac-title{font-family:'Lora',serif;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.4}
+.ac-body{font-family:'Lora',serif;font-size:12px;color:var(--ink3);line-height:1.7}
+.ac-src a{color:var(--green);font-family:'Space Mono',monospace;font-size:9px;text-decoration:none;display:block;margin-top:8px}
+
+/* PULL QUOTE */
+.pull-quote{border:2px solid var(--ink);padding:40px 44px;margin:56px 0;position:relative}
+.pull-quote::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:140px;color:var(--off3);position:absolute;top:-28px;left:22px;line-height:1;pointer-events:none}
+.pull-quote p{font-family:'Cormorant Garamond',serif !important;font-size:clamp(20px,2.8vw,26px) !important;font-style:italic;font-weight:600;line-height:1.46 !important;color:var(--ink) !important;margin-bottom:14px !important;position:relative;z-index:1}
+.pull-quote cite{font-family:'Space Mono',monospace;font-size:10px;color:var(--ink3);font-style:normal;letter-spacing:.06em;display:block}
+
+/* REFORMS */
+.rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:44px 0}
+@media(max-width:580px){.rec-grid{grid-template-columns:1fr}}
+.rec-card{background:var(--white);border:1px solid var(--rule);border-radius:6px;padding:24px;border-top:3px solid var(--green)}
+.r-num{font-family:'Space Mono',monospace;font-size:9px;color:var(--green);letter-spacing:.1em;margin-bottom:10px}
+.r-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.25}
+.r-body{font-family:'Lora',serif;font-size:13px;color:var(--ink3);line-height:1.72}
+
+/* REFERENCES */
+.references{background:var(--off);border-top:2px solid var(--rule);padding:60px 36px}
+.references-inner{max-width:720px;margin:0 auto}
+.references h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.ref-note{font-family:'Lora',serif;font-size:14px;color:var(--ink3);margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--rule);font-style:italic;line-height:1.7}
+.ref-list{list-style:none}
+.ref-list li{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule);font-family:'Lora',serif;font-size:14px;line-height:1.72;color:var(--ink2)}
+.ref-list li:last-child{border-bottom:none}
+.ref-num{font-family:'Space Mono',monospace;font-size:10px;color:var(--green);min-width:26px;padding-top:3px;font-weight:700}
+.ref-list a{color:var(--green);text-decoration:none;word-break:break-all;font-family:'Space Mono',monospace;font-size:9px;display:block;margin-top:4px}
+.back-link{color:var(--green);font-size:9px;margin-left:10px;font-family:'Space Mono',monospace;text-decoration:none}
+
+.closing{background:var(--green2);padding:72px 36px;text-align:center}
+.closing h3{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,36px);font-style:italic;font-weight:600;color:#edeae0;max-width:620px;margin:0 auto 18px;line-height:1.3}
+.closing p{font-family:'Lora',serif;font-size:15px;color:#4a7860;max-width:520px;margin:0 auto;line-height:1.78}
+
+.series-nav{background:var(--off);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px;text-align:center}
+.series-nav p{font-family:'Space Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.08em;margin-bottom:10px;text-transform:uppercase}
+.series-nav a{font-family:'Lora',serif;font-size:14px;color:var(--green);text-decoration:none;font-style:italic}
+
+.about{background:var(--green);color:#f0f7f3;padding:60px 36px}
+.about-inner{max-width:720px;margin:0 auto}
+.about h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.2)}
+.qual-list{list-style:none;margin-bottom:28px}
+.qual-list li{font-family:'Lora',serif;font-size:14px;line-height:1.7;padding:12px 0 12px 22px;border-bottom:1px solid rgba(255,255,255,.1);color:#a8c8b8;position:relative}
+.qual-list li::before{content:'▸';position:absolute;left:0;top:14px;color:#7cbfa0;font-size:10px}
+.qual-list li strong{color:#f0f7f3;display:block;font-size:15px;margin-bottom:2px}
+.tags-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:28px}
+.tag{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:4px;padding:10px 14px}
+.tag strong{display:block;font-family:'Lora',serif;font-size:13px;color:#f0f7f3;margin-bottom:2px}
+.tag span{font-family:'Space Mono',monospace;font-size:10px;color:#90c0a8;line-height:1.5}
+.links-row{display:flex;gap:12px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,.2)}
+.lbtn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid rgba(255,255,255,.28);border-radius:4px;color:#f0f7f3;text-decoration:none;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;transition:background .2s}
+.lbtn:hover{background:rgba(255,255,255,.1)}
+
+footer{padding:36px;text-align:center;border-top:1px solid var(--rule);background:var(--white)}
+footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--ink3);line-height:2.2;letter-spacing:.04em}
+
+.fade{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
+.fade.in{opacity:1;transform:none}
+
+@media(max-width:600px){
+  .hero,.article{padding-left:20px;padding-right:20px}
+  .hero{padding-top:52px;padding-bottom:44px}
+  .article{padding-top:52px}
+  .pull-quote{padding:28px 22px}
+  .about,.references,.closing{padding:48px 20px}
+  .masthead{padding:14px 20px}
+  .intro-banner{padding:52px 20px}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- SOCIAL CARD: bold, minimal, eye-catching -->
+<div class="social-card">
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#041c10"/>
+
+  <!-- large ghost text for visual depth -->
+  <text x="-20" y="480" font-family="Georgia,serif" font-size="340" font-weight="700" fill="rgba(11,66,38,0.15)" letter-spacing="-10">ZMB</text>
+
+  <!-- left accent bar -->
+  <rect x="72" y="60" width="8" height="510" fill="#0b4226"/>
+
+  <!-- MAIN HEADLINE — large but fits within card -->
+  <text x="112" y="200" font-family="Georgia,serif" font-size="86" font-weight="700" fill="#f0ede4" letter-spacing="-2">Being Zambian</text>
+  <text x="112" y="298" font-family="Georgia,serif" font-size="86" font-weight="700" font-style="italic" fill="#0d6040" letter-spacing="-2">Should Mean Something</text>
+
+  <!-- divider -->
+  <line x1="112" y1="336" x2="1100" y2="336" stroke="rgba(180,230,200,0.18)" stroke-width="2"/>
+
+  <!-- three punchy lines -->
+  <text x="112" y="392" font-family="Georgia,serif" font-size="26" fill="#c8c070">Anyone can buy a Zambian NRC for K500. Foreigners take your land and your jobs.</text>
+  <text x="112" y="438" font-family="Georgia,serif" font-size="26" fill="#c8c070">Zambians leave to serve 7 royal families in a desert the size of Lusaka District.</text>
+  <text x="112" y="496" font-family="Georgia,serif" font-size="22" font-style="italic" fill="#4a8a68">The problem is not the country. The system was never finished.</text>
+
+  <!-- author -->
+  <text x="112" y="590" font-family="Courier New,monospace" font-size="13" fill="#1e4030" letter-spacing="0.1em">ACKRAD SETH SHIMWENSE · CIVIL ENGINEER AND POLICY ANALYST · ZAMBIAN</text>
+</svg>
+</div>
+
+<div class="series-bar">
+  <span>The Zambia We Are Leaving On The Table &nbsp;·&nbsp; <strong>Article 2 of 5</strong></span>
+</div>
+
+<header class="masthead">
+  <span class="m-title">Citizenship · Immigration · Sovereignty</span>
+  <a class="m-link" href="the-dollar-lie.html">← Article 1: The Dollar Lie</a>
+</header>
+
+<section class="hero">
+  <div class="hero-kicker">Citizenship · Immigration · Identity · Sovereignty</div>
+  <h1>Being Zambian<br><em>Should Mean Something</em></h1>
+  <div class="hero-subtitle">Zambia Cannot Keep Being the Solution to Problems Its Neighbours Refuse to Solve</div>
+  <p class="hero-deck">Zambia is being hollowed out from two directions at once. From outside, by millions of undocumented foreigners whose governments failed them and who enter freely because Zambia's identity and immigration system is broken and corrupt. From inside, because being Zambian stopped meaning anything worth protecting, so Zambians themselves leave to serve royal families in the Gulf and clean hospitals in London. Both problems have the same cause. Both have the same solution. This article makes that argument with data.</p>
+  <div class="hero-byline">
+    <div class="byline-av">AS</div>
+    <div class="byline-info">
+      <div class="byline-name">Ackrad Seth Shimwense</div>
+      <div class="byline-role">Civil Engineer · Data Analyst · PhD Candidate, Development Studies · San Francisco, USA</div>
+    </div>
+  </div>
+</section>
+
+<div class="intro-banner">
+  <blockquote>
+    "There is a man in Kalingalinga who was born in Lusaka, went to Munali Secondary School, and worked his whole life in this country. He cannot get a plot of land in his own neighbourhood because someone with a Congolese accent and a Zambian NRC they bought three years ago got there first. And somewhere in Dubai, a Zambian nurse is changing bedsheets in a hospital that would not give her a job at home. <em>These two stories are the same story.</em>"
+    <cite>— This is what this article is about.</cite>
+  </blockquote>
+</div>
+
+<article class="article">
+
+<!-- ══════════════════════════════════════════
+     CHAPTER 1 — WHAT ZAMBIA HAS
+     Establish what is worth protecting first.
+     The argument only works if the reader
+     understands what is at stake.
+══════════════════════════════════════════ -->
+
+  <div class="chapter-marker">Chapter One</div>
+  <h2>First, Understand What Zambia Actually Has. Because Most Zambians Have Forgotten.</h2>
+
+  <p>Zambia has 752,612 square kilometres of largely arable land. It holds the Zambezi, Kafue, Luangwa, and Bangweulu water systems — freshwater reserves that countries in the Middle East and North Africa would consider a national miracle. It has political stability the entire region envies, English as a working language, and a median population age of 18.8 years, meaning the country's demographic dividend has barely started. If natural endowment alone built nations, Zambia would already be wealthy beyond argument.</p>
+
+  <p>Start with the minerals, because the list is longer than most Zambians ever say out loud. Copper — Zambia is one of the world's top copper producers and is sitting on reserves that the global green energy transition is turning into one of the most strategically important commodities on earth. Cobalt — Zambia holds some of the largest cobalt deposits on the continent, essential for every electric vehicle battery being manufactured today. Emeralds — Zambia produces some of the world's finest quality emeralds and accounts for a significant share of global gemstone supply. Manganese, nickel, iron ore, gold, silver, lead, zinc — all present in commercially significant deposits across the Copperbelt, Northwestern Province, and beyond. Uranium — Zambia has documented uranium deposits, placing it among the countries with strategic nuclear fuel potential as the world debates energy diversification. And oil — exploration activities have identified hydrocarbon potential in the Luangwa, Bangweulu, and Zambezi basins, with prospecting licences awarded and seismic surveys completed. Zambia may yet join the ranks of oil-producing nations. That possibility sits in the ground right now, under land that belongs to Zambian citizens by law.</p>
+
+  <p>Then the water. The Zambezi, Kafue, Luangwa, Bangweulu, and Luapula river systems feed Zambia's agriculture, power its hydroelectric generation, supply its cities, and give it a food security base that arid countries spend billions trying to replicate through desalination and irrigation infrastructure. Zambia also hosts more than 40 percent of Africa's total waterfall volume. Victoria Falls alone generates hundreds of millions in tourism revenue and has barely been developed to its potential because the roads, hotels, and infrastructure needed to move people from the border to the falls are still being built.</p>
+
+  <p>About 94 percent of Zambia's total land area falls under customary tenure — land administered by chiefs and community structures and reserved by law for citizens only.<a href="#ref1" class="cite-ref" id="back1">[1]</a> A Zambian citizen can access this land at near-zero cost through community allocation. No foreign national can legally access customary land without presidential consent and chief approval. The law is explicit. The land belongs to Zambians.</p>
+
+  <p>And Zambia has something that no amount of oil, copper, or cobalt revenue can buy: a functioning democracy. In 2021, the Zambian people voted out a government that had been looting the treasury, and the transfer of power happened peacefully. No Emirati citizen has ever done that. No citizen of the DRC, Zimbabwe, or Burundi has successfully done that in living memory either. Democratic accountability is a form of national wealth that most of Zambia's neighbours would trade everything for. Zambia already has it and mostly takes it for granted.</p>
+
+  <p>And then there are the direct benefits of being Zambian that most Zambians never stop to count. Free education from early childhood through secondary school — 2.3 million children enrolled without paying a single kwacha. Free healthcare at government facilities. Social Cash Transfers paid monthly to 1.3 million households, reaching 5.7 million of the country's most vulnerable people. Government bursaries and scholarships for university education disbursed annually. The Farmer Input Support Programme giving smallholder farmers access to subsidised seed and fertiliser every season. The Constituency Development Fund of K30.8 million per constituency every year, funding schools, clinics, boreholes, and roads in every corner of the country. Rural electrification and off-grid solar installations reaching communities that had never had electricity. And the civil service recruitment that this government has run continuously and at scale — over 30,000 teachers, over 11,000 nurses and health workers, periodic recruitment of police officers, Zambia National Service personnel, Zambia Air Force, Zambia Army, Zambia Correctional Service prison warders, and other uniformed services — thousands of jobs created every year that go directly to Zambian citizens and only to Zambian citizens. These are the benefits of being Zambian. They are real, they are growing, and because the system that should protect them is broken, foreigners with fraudulent NRCs access them too.</p>
+
+  <p>If you described all of this — the minerals, the water, the land, the democracy, the stability — to someone in the DRC, in Burundi, in Somalia, or to any of the millions of people who have risked their lives to get into Zambia over the last two decades, they would not understand why any Zambian would feel the need to leave. That gap between what Zambia has and what its citizens feel every day is exactly the problem this article is about.</p>
+
+<!-- ══════════════════════════════════════════
+     CHAPTER 2 — THE REAL NUMBERS
+     Who is actually here? The official figures
+     are a lie by omission. Show the real scale.
+══════════════════════════════════════════ -->
+
+  <div class="chapter-marker">Chapter Two</div>
+  <h2>The Official Count Says 22 Million Zambians. The Real Number Is Almost Certainly Much Lower.</h2>
+
+  <p>The government says Zambia has approximately 22 million people. Official immigration records say there were 170,200 registered immigrants in 2019 and 106,770 registered refugees and asylum seekers by 2024.<a href="#ref2" class="cite-ref" id="back2">[2]</a> Read those numbers and you might think the foreign population is manageable and documented. That reading is wrong. Badly wrong. And the Department of Immigration's own weekly operations prove it.</p>
+
+  <p>In a single joint operation in Lusaka on July 4, 2025, security agencies arrested 255 people. Of the 213 remaining in custody: 133 were Burundian, 44 Congolese, 13 Rwandese, 12 Tanzanian, 2 Somali, 1 Indian, 1 Nigerian, and 7 were claiming to be Zambian citizens.<a href="#ref3" class="cite-ref" id="back3">[3]</a> That was one operation in one city on one day. Between May and July 2024, operations in the Copperbelt, Lusaka, Chipata, Serenje, and Nyimba apprehended hundreds more. The Department of Immigration runs operations like these every week.</p>
+
+  <p>If hundreds of undocumented people are being caught in routine operations every single week across only a handful of cities, and this has been going on for years, and vast stretches of Zambia's borders are monitored by almost nothing, then the number of undocumented foreign nationals living inside Zambia is not in the hundreds of thousands. It is in the millions. The Africa Center documents that along the southern migration corridor running through Zambia, 85 percent of irregular migrants are Ethiopian and 14 percent Somali — most of them male, most heading toward South Africa, and a significant number settling informally along the way.<a href="#ref4" class="cite-ref" id="back4">[4]</a></p>
+
+  <p>Let us do the minimum conservative arithmetic. The Department of Immigration runs documented operations every week. Using only the operations that were publicly reported between 2024 and 2025, the average apprehension rate is conservatively 200 to 400 people per week across all provinces combined. That is roughly 10,000 to 20,000 people apprehended per year — and immigration researchers consistently estimate that for every undocumented migrant caught in any country's enforcement operations, between 5 and 10 are not caught. That gives a minimum operational estimate of 50,000 to 200,000 new undocumented arrivals settling per year, on top of the existing stock. The IOM's own Zambia country profile acknowledges that the true undocumented population is significantly higher than any registered figure. At a conservative 5-to-1 ratio applied across years of consistent enforcement operations, the cumulative undocumented population — separate from the 276,970 officially registered — is almost certainly above 1 million people. It is plausibly 2 million or more. Nobody knows the exact figure because that is what undocumented means. But the arithmetic from the operations data does not support the comfortable official line that Zambia has a manageable, largely documented foreign population.</p>
+
+  <div class="chart-block fade">
+    <div class="ch-title">What the numbers actually show versus what operations reveal</div>
+    <div class="ch-sub">Official registered figures alongside a conservative estimate of undocumented presence based on weekly operational data. The gap between these two bars is where the real story lives. These are minimum estimates. The actual undocumented population is widely acknowledged to be significantly higher than any documented figure.</div>
+    <div class="ch-legend">
+      <span><span class="leg-dot" style="background:#0b4226;"></span>Officially registered and documented</span>
+      <span><span class="leg-dot" style="background:#8e1a10;"></span>Conservative minimum estimate from operational data</span>
+    </div>
+    <div class="chart-canvas-wrap" style="height:280px;"><canvas id="chart1"></canvas></div>
+    <div class="ch-source">
+      Sources: <a href="https://migrants-refugees.va/country-profile/zambia/" target="_blank" rel="noopener">IOM/Vatican Migrants Zambia 2021</a> · <a href="https://www.unhcr.org/where-we-work/countries/zambia" target="_blank" rel="noopener">UNHCR Zambia Annual Report 2024</a> · <a href="https://www.zambiaimmigration.gov.zm/news/press-releases/" target="_blank" rel="noopener">Zambia Dept of Immigration Press Releases 2024–2025</a> · <a href="https://africacenter.org/spotlight/migration-trends-2025/" target="_blank" rel="noopener">Africa Center Migration Trends 2025</a><br>
+      Note: Conservative estimates are based on apprehension volumes, IOM-acknowledged data gaps, and documented fraud scale. They are not verified census data and are presented as minimum plausible ranges.
+    </div>
+  </div>
+
+  <table class="city-table fade">
+    <thead>
+      <tr><th>Where they settle</th><th>Who is there</th><th>Entry route</th><th>Scale</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Copperbelt — Ndola, Kitwe, Chingola</td>
+        <td>Congolese nationals largest group nationally. Informal mining and trade. Many with fraudulent NRCs accessing land and businesses reserved for citizens.</td>
+        <td>North-Western Province and Luapula border crossings</td>
+        <td><span class="pill pill-high">VERY HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Lusaka — Mtendere, Chawama, George, Matero</td>
+        <td>Burundians, Rwandese, Congolese, Somalis, Ethiopians. Multiple nationalities settled informally. Some with fraudulent NRCs. Children born here claim Zambian citizenship automatically.</td>
+        <td>Via Tanzania, Luapula, Great East Road corridor</td>
+        <td><span class="pill pill-high">VERY HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Northern corridor — Nakonde, Isoka, Serenje</td>
+        <td>Ethiopians and Somalis on the southern migration route. High rate of informal settlement along the way. Many never reach South Africa.</td>
+        <td>Tanzania border, Great North Road</td>
+        <td><span class="pill pill-high">VERY HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Southern Province — Livingstone, Choma</td>
+        <td>Zimbabweans in informal cross-border trade and seasonal labour. Many on expired permits or none at all.</td>
+        <td>Chirundu and Victoria Falls border posts</td>
+        <td><span class="pill pill-med">HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Eastern Province — Chipata, Petauke</td>
+        <td>Malawians, Ethiopians in transit, Somali traders.</td>
+        <td>Malawi and Mozambique border</td>
+        <td><span class="pill pill-med">HIGH</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- ══════════════════════════════════════════
+     CHAPTER 3 — HOW THEY GET IN AND WHAT IT COSTS
+     The K500 NRC fraud, insiders, births,
+     land theft, hospital burden. All connected.
+══════════════════════════════════════════ -->
+
+  <div class="chapter-marker">Chapter Three</div>
+  <h2>K500, a Phone Call, and a Passport Office Insider. That Is All It Takes to Become Zambian.</h2>
+
+  <p>The border is one entry point. The NRC office is another. And the second is in many ways more dangerous than the first, because a person who crosses a bush path is an illegal immigrant. A person who buys a Zambian NRC through a fraud network becomes, for every administrative purpose in the country, a Zambian citizen. They vote. They access customary land. They register businesses in reserved sectors. They appear in the census. And their children, born in Zambia, grow up as Zambians.</p>
+
+  <div class="case-list fade">
+    <div class="case-item">
+      <div class="case-date">August 2025 — Ndola Passport Office</div>
+      <div class="case-title">A government civil servant inside the passport office was selling Zambian identity to foreign nationals</div>
+      <div class="case-desc">An Assistant Registration Officer at the Ndola Passport Office was arrested as part of a six-person document fraud syndicate. A Burundian refugee was found carrying a complete Zambian identity package — NRC and passport — in the name of a Zambian man. When the network was broken up, investigators recovered 903 genuine government laminating pouches, blank green NRC cards, photocopied identity documents, academic certificates, and institutional stamps being used to process fraudulent visa applications at foreign embassies in Lusaka. These were not forgeries. They were real government materials diverted by a real government employee. This is not occasional corruption. It is a supply chain.</div>
+      <div class="case-src"><a href="https://www.zambiamonitor.com/zambia-immigration-bursts-syndicate-producing-fake-national-registration-cards-six-arrested/" target="_blank" rel="noopener">Zambia Monitor, August 2025</a></div>
+    </div>
+    <div class="case-item">
+      <div class="case-date">July 4, 2025 — Lusaka, one joint operation on one day</div>
+      <div class="case-title">255 people arrested. 133 were Burundian. Seven were claiming Zambian citizenship.</div>
+      <div class="case-desc">A joint security operation in Lusaka detained 255 suspected illegal immigrants in a single day. Breakdown of the 213 who remained in custody: 133 Burundian, 44 Congolese, 13 Rwandese, 12 Tanzanian, 2 Somali, 1 Indian, 1 Nigerian, and 7 claiming Zambian citizenship. A 29-year-old Zambian man named Blessings Tembo was also sentenced to two years imprisonment for transporting 50 undocumented Ethiopians inside a Shoprite-branded distribution truck. One operation. One city. One day. Multiply this across 52 weeks, across all provinces, and ask yourself what the real number is.</div>
+      <div class="case-src"><a href="https://www.dailynationzambia.com/2025/07/213-illegal-immigrants-detained-in-lusaka-crackdown/" target="_blank" rel="noopener">Daily Nation Zambia, July 2025</a></div>
+    </div>
+    <div class="case-item">
+      <div class="case-date">2016 to 2024 — Eight years, three deportations, three successful returns</div>
+      <div class="case-title">A Congolese man deported three separate times came back each time with someone's help</div>
+      <div class="case-desc">Freddy Chansa, a 45-year-old Congolese businessman, obtained a Zambian NRC, passport, and Voter's Registration Card through fraud. Deported 2016. Convicted and fined. Deported 2022. Returned. Deported June 2024 — this time arriving at the Ndola Immigration Office with lawyers, demanding to be processed as a Zambian citizen. Eight years. Three deportations. Three returns. Someone inside the system made each return possible. The foreigner is the customer. The Zambian civil servant is the supplier. Until the supplier faces real consequences, the market stays open.</div>
+      <div class="case-src"><a href="https://www.zambiaimmigration.gov.zm/news/press-releases/" target="_blank" rel="noopener">Zambia Department of Immigration Press Release, June 2024</a></div>
+    </div>
+  </div>
+
+  <div class="red-callout fade">
+    <div class="big-num">K500</div>
+    <div class="stat-text">The reported cost through an agent in Chipata Compound for a fraudulent Zambian NRC. The document that entitles its holder to customary land across 94 percent of Zambia's territory, employment priority in protected sectors, voting rights, healthcare access, school places, and all government programmes — costs less than a tank of fuel. When citizenship is this cheap to buy, it stops being an identity. It becomes a product. And when it is a product, the people whose birthright it was become just other buyers in a market they never agreed to join.</div>
+    <div class="stat-src">Source: documented through Zambia Monitor investigations and Zambia Department of Immigration press releases 2024–2025</div>
+  </div>
+
+  <p>The cost of this fraud is not abstract. Every person who enters Zambia illegally and accesses its healthcare system is a hospital bed, a doctor's hour, and a medication stock that was funded by Zambian taxes for Zambian citizens. Every child born in Zambia to undocumented parents who then claims Zambian citizenship is a school place, a teacher's time, and a future voter added to the roll without the knowledge or consent of the people who built that school. Every foreign national who obtains a fraudulent NRC and then accesses customary land is land taken directly from the Zambian family that should have had it. None of this is migration. It is substitution. Zambian citizens are being quietly substituted out of their own country, one fraudulent NRC at a time.</p>
+
+<!-- ══════════════════════════════════════════
+     CHAPTER 4 — THE REGIONAL BURDEN
+     Why the neighbours are responsible.
+     Their leaders loot. Their people flee.
+     Zambia absorbs the cost. That must end.
+══════════════════════════════════════════ -->
+
+  <div class="chapter-marker">Chapter Four</div>
+  <h2>Zambia Is Not the Social Safety Net for Governments That Prefer Looting Their Countries to Governing Their People</h2>
+
+  <p>Most of the people arriving in Zambia without documentation are not here because they are criminals or because they targeted Zambia maliciously. They are here because the governments of their countries failed them so completely, for so long, that leaving was the only rational choice available. That truth deserves acknowledgment. And then it needs to be followed by a harder one.</p>
+
+  <p>The DRC has been the single largest source of immigrants and refugees into Zambia for decades. It sits on more mineral wealth than perhaps any country on earth. Copper, cobalt, coltan, cassiterite, gold, diamonds, timber. Those resources are being extracted right now by international commodity trading networks, Chinese and European mining companies, and a Congolese political class that has converted the state into a machine for personal enrichment. The money leaves the country. The infrastructure is destroyed. The conflict that is partly financed by those same commodity chains is ongoing. And the Congolese people — the ones who cannot get into a diplomatic visa queue in Kinshasa — cross into North-Western Province, Luapula, and the Copperbelt because their own country has been turned into a place where survival is genuinely not guaranteed.</p>
+
+  <p>Zimbabwe's story is known. Economic collapse, political violence, currency destruction, and systematic looting by an elite that never faced real consequences, produced one of the largest emigration events in Sub-Saharan African history. Most Zimbabweans did not choose to leave. Their government chose for them. They came through Chirundu and Livingstone into Southern Province and Zambia received them because Zambia was the first functional country across the border. Not because Zambia had invited them. Not because Zambia had agreed to carry the burden. But because the burden was thrown at it and nobody refused it loudly enough.</p>
+
+  <p>Burundi. Ethiopia. Somalia. Rwanda in certain periods. Eritrea. The pattern is identical every time. A government that prioritises its own enrichment over its people's welfare. Resources plundered and money moved to private accounts in Geneva and Dubai. Citizens who have no viable option except to move. And Zambia at the crossroads, absorbing the overflow of every governance failure in the region because its hospitals, schools, land, and food systems are still more functional than what those citizens left behind.</p>
+
+  <p>The Zambian taxpayer is now paying for the healthcare of people whose governments could afford it if they had not stolen the budget. The Zambian education system is absorbing children whose governments built nothing. Zambia's housing markets and food security are being strained by populations whose presence in this country is the direct consequence of leadership failures that Zambia had nothing to do with and was never asked to solve. This is not compassion. This is the transfer of someone else's governance failure onto Zambia's citizens without consent, without compensation, and without end.</p>
+
+  <div class="pull-quote fade">
+    <p>"Regional integration is not one country absorbing the sick, the homeless, and the undocumented overflow of every neighbouring government that found looting more convenient than governing. Integration requires reciprocity. You cannot throw your burden at Zambia and call it African unity."</p>
+    <cite>— This is sovereignty. Every functioning country on earth makes this argument. Zambia must make it too.</cite>
+  </div>
+
+  <p>The EU has free movement among its members and one of the world's most defended external borders. The GCC provides free movement for six member nations while running some of the world's most controlled immigration systems for everyone outside the bloc. The United States enforces its border as a fundamental statement of national sovereignty. Every functioning regional system on earth distinguishes between integration — which is reciprocal and conditional — and invasion, which is what happens when the overflow of failed governance is simply absorbed by a more stable neighbour without conditions.</p>
+
+<!-- ══════════════════════════════════════════
+     CHAPTER 5 — THE UAE REFERENCE
+     What citizenship protection looks like
+     when it works. Honest — including flaws.
+     UAE is the reference. Zambia is the subject.
+══════════════════════════════════════════ -->
+
+  <div class="chapter-marker">Chapter Five</div>
+  <h2>What Citizenship Protection Looks Like When a Country Actually Builds the System — Using the UAE as an Honest Reference</h2>
+
+  <p>To understand what Zambia needs to build, it helps to look at a country that has actually built it. This article uses the UAE as a reference point — not as a political model to copy, but as a concrete example of a government that decided its citizens come first, built enforcement systems to deliver that decision, and delivers the results so consistently that even the 9 million foreign workers who will never be citizens understand exactly where they stand in the economy.</p>
+
+  <p>Before using that reference, the full picture of the UAE needs to be stated plainly. The UAE is not a democracy. It is a federation of 7 monarchies. The Al Nahyan family owns Abu Dhabi. The Al Maktoum family owns Dubai. The Al Qasimi family controls Sharjah and Ras Al Khaimah. These 7 ruling families cannot be voted out, cannot be publicly criticised without legal risk, and control the sovereign wealth funds that manage the country's oil revenues.<a href="#ref5" class="cite-ref" id="back5">[5]</a> The 9 million foreign workers who built every building in Dubai, who staff every hospital in Abu Dhabi, who keep every service running, have no path to citizenship, no voting rights, no right to organise, and no security of tenure beyond their employment contract. When the contract ends, they leave. The country they helped build never belonged to them in any legal or political sense.</p>
+
+  <p>The citizen welfare programme that Zambians observe from the Gulf and envy from abroad — the marriage grants, the housing allocations, the free university education, the salary premium — is funded by oil revenues controlled by 7 families and distributed among approximately 1 million citizens. Delivering housing grants and marriage funds to 1 million people when you control the world's seventh largest proven oil reserves is not a remarkable feat of governance. It is the minimum a family-owned petro-state does to keep its citizens quiet and loyal in a system that gives them no political voice.</p>
+
+  <p>Emirati citizens are comfortable. They are not free. A Zambian citizen has a right that no Emirati has ever possessed: the right to vote out a government that fails them. In 2021 Zambian citizens exercised that right and it worked. That right is worth more than any marriage grant signed by a Sheikh who cannot be removed regardless of what he does. Zambia should never trade its democracy for a fuel subsidy.</p>
+
+  <p>What Zambia should study from the UAE is not the political structure. It is the enforcement mechanism. The specific thing the UAE got right is this: it built systems that are staffed, digitally integrated, and consistently enforced, so that every employer, every worker, and every resident in the country understands who has priority and what happens when that priority is violated. Here is what those mechanisms look like:</p>
+
+  <div class="uae-grid fade">
+    <div class="uae-card">
+      <div class="uae-cat">Employment — the salary premium</div>
+      <div class="uae-title">An Emirati earns 2 to 3 times what a foreigner earns for the same job</div>
+      <div class="uae-body">With identical qualifications and the same job title, an Emirati citizen earns two to three times the salary of a foreign national. All government jobs are reserved exclusively for citizens. Private sector Emiratisation quotas require minimum percentages of citizen employees, enforced by the Ministry of Human Resources through an automated digital system that records breaches and issues financial penalties automatically. No inspector required. No phone call to the right person. The system does it.</div>
+      <div class="uae-src"><a href="https://emiratisationnafis.org/emirati-benefits" target="_blank" rel="noopener">Emiratisation NAFIS — Official UAE Government Programme</a></div>
+    </div>
+    <div class="uae-card">
+      <div class="uae-cat">Housing and land</div>
+      <div class="uae-title">Free land and a government home as a citizen's right — no foreigner can have this</div>
+      <div class="uae-body">Emirati citizens receive free land allocation and housing construction support through the Sheikh Zayed Housing Programme. Non-citizens are legally restricted to designated freehold zones only. No foreign national can own land outside those zones regardless of wealth or tenure. The boundary between citizen entitlement and foreigner access is legally clear and digitally enforced.</div>
+      <div class="uae-src"><a href="https://www.moei.gov.ae/en/services/housing-assistance-request" target="_blank" rel="noopener">UAE Ministry — Housing Assistance (official)</a></div>
+    </div>
+    <div class="uae-card">
+      <div class="uae-cat">Marriage and family support</div>
+      <div class="uae-title">Up to AED 150,000 (approximately USD 41,000) when you marry for the first time</div>
+      <div class="uae-body">The Sheikh Zayed Marriage Fund provides eligible Emirati men with a grant of up to AED 150,000 toward wedding expenses. Couples who choose modest traditional weddings receive additional rewards. Monthly housing allowance is paid while young families wait for their allocation. This is funded by the federal social welfare budget of AED 28 billion — all of it for 1 million citizens in a country that earns hundreds of billions from oil annually.</div>
+      <div class="uae-src"><a href="https://gulfnews.com/uae/government/uae-strengthens-marriage-support-for-nationals-during-year-of-family-1.500401138" target="_blank" rel="noopener">Gulf News — UAE Marriage Support 2026</a></div>
+    </div>
+    <div class="uae-card">
+      <div class="uae-cat">Education and healthcare</div>
+      <div class="uae-title">Free from kindergarten through university overseas — no foreigner receives this regardless of years lived there</div>
+      <div class="uae-body">All Emirati citizens receive free education through university level. Top students receive overseas scholarships with full tuition and living allowance. Healthcare is fully subsidised including treatment abroad reimbursed by the government. No foreign national resident of any length, any wealth, or any professional standing receives any of this. The distinction is clear. The enforcement is total.</div>
+      <div class="uae-src"><a href="https://u.ae/en/information-and-services/social-affairs/social-welfare/social-welfare-programmes" target="_blank" rel="noopener">UAE Government — Social Welfare Portal (official)</a></div>
+    </div>
+    <div class="uae-card">
+      <div class="uae-cat">Citizenship access</div>
+      <div class="uae-title">No form exists. Royal nomination only. 30-year minimum. Children of foreigners born there have nothing automatic.</div>
+      <div class="uae-body">You cannot apply for UAE citizenship. It is granted through nomination by Rulers' Courts or the Cabinet to exceptional scientists, doctors, investors, or artists. Minimum 30 years legal residence before consideration. Children born in the UAE to foreign parents have no automatic citizenship regardless of how long the family has lived there. The system was designed this way intentionally. Citizenship is not available. It is conferred.</div>
+      <div class="uae-src"><a href="https://u.ae/en/information-and-services/passports-and-traveling/emirati-nationality" target="_blank" rel="noopener">Official UAE Government — Emirati Nationality Portal</a></div>
+    </div>
+    <div class="uae-card">
+      <div class="uae-cat">Daily cost of living</div>
+      <div class="uae-title">Fuel at 85% subsidy. Electricity and water at 50%. Food grants monthly. AED 28 billion welfare budget for 1 million people.</div>
+      <div class="uae-body">Under the 2026 federal programme: 85 percent fuel subsidy when prices exceed AED 2.1 per litre, 50 percent electricity and water subsidy, food grants of AED 500 per month for the household head plus AED 250 per child. Every Emirati knows exactly what their government does for them. That daily visibility creates the loyalty that looks like love but is actually the rational response to consistent delivery.</div>
+      <div class="uae-src"><a href="https://u.ae/en/information-and-services/social-affairs/social-welfare/social-welfare-programmes/social-welfare-for-low-income-nationals" target="_blank" rel="noopener">UAE Government — Social Welfare for Nationals (official)</a></div>
+    </div>
+  </div>
+
+  <p>Zambia has 94 percent customary land reserved for citizens. It has democratic rights no Emirati will ever hold. It has mineral wealth that rivals the Gulf's oil. What it does not have is the enforcement infrastructure that makes those legal protections feel real every day. The UAE has 83,600 square kilometres and oil. Zambia has 752,612 square kilometres, copper, cobalt, water, farmland, and a functional democracy. Zambia has more. The question is whether it will finish building the system to protect it.</p>
+
+<!-- ══════════════════════════════════════════
+     CHAPTER 6 — WHAT ZAMBIA IS ALREADY BUILDING
+     Acknowledge real progress. Frame it as
+     the foundation that needs a structure on top.
+══════════════════════════════════════════ -->
+
+  <div class="chapter-marker">Chapter Six</div>
+  <h2>The Foundation Is Being Built. The Problem Is That Too Many Zambians Cannot See It Through the Noise.</h2>
+
+  <p>The UPND government that came to power in August 2021 inherited a country with debt at 120 percent of GDP, a mining sector in collapse, hundreds of thousands of civil servants going without pay, and an economy in negative growth. What has been built since then is real, measurable, and deserves acknowledgment even from those who oppose the party that built it. Denying real progress for political reasons, especially tribal political opposition, is one of the most effective ways to ensure the country cannot evaluate itself honestly.</p>
+
+  <div class="achieve-grid fade">
+    <div class="achieve-card">
+      <div class="ac-cat">Free Education</div>
+      <div class="ac-num">2.3M</div>
+      <div class="ac-title">Children in free education since January 2022</div>
+      <div class="ac-body">Education budget from K18.1 billion to K31.4 billion. Over 30,000 teachers and 11,000 health workers recruited. School feeding programme expanded. New classrooms built through CDF across all 156 constituencies.</div>
+      <div class="ac-src"><a href="https://www.parliament.gov.zm/node/12586" target="_blank" rel="noopener">National Assembly Budget Speech, September 2025</a></div>
+    </div>
+    <div class="achieve-card">
+      <div class="ac-cat">Mining Revival</div>
+      <div class="ac-num">1M+ MT</div>
+      <div class="ac-title">Copper on track with KCM, Mopani, and Lubambe all reopened and expanding</div>
+      <div class="ac-body">Production rising from 280,000 MT to over 1 million metric tonnes. New mines at Mingomba, Kitumba, and Mwekera coming online. Battery exports to 8 countries already. Target of 3 million MT is the destination.</div>
+      <div class="ac-src"><a href="https://www.parliament.gov.zm/node/12586" target="_blank" rel="noopener">National Assembly Budget Speech, September 2025</a></div>
+    </div>
+    <div class="achieve-card">
+      <div class="ac-cat">Social Protection</div>
+      <div class="ac-num">5.7M</div>
+      <div class="ac-title">Vulnerable Zambians reached by Social Cash Transfer</div>
+      <div class="ac-body">SCT budget from K2.3 billion to K3.7 billion. 1.3 million households. Monthly payments raised. 258,000 farmers cleared of arrears unpaid for two years. Cash for Work added. Farming input support scaling.</div>
+      <div class="ac-src"><a href="https://zambianobserver.com/united-party-for-national-development-presidential-support-programme/" target="_blank" rel="noopener">Zambian Observer — UPND Programme Review</a></div>
+    </div>
+    <div class="achieve-card">
+      <div class="ac-cat">CDF Decentralisation</div>
+      <div class="ac-num">K30.8M</div>
+      <div class="ac-title">Per constituency up from K1.6M — communities now build their own development</div>
+      <div class="ac-body">Total CDF from K250 million to K4 billion nationally. Health posts, classrooms, water points, and skills centres built by communities for communities through devolved funding for the first time in Zambia's history.</div>
+      <div class="ac-src"><a href="https://en.wikipedia.org/wiki/Economy_of_Zambia" target="_blank" rel="noopener">Economy of Zambia — Wikipedia (updated 2025)</a></div>
+    </div>
+    <div class="achieve-card">
+      <div class="ac-cat">Energy and Roads</div>
+      <div class="ac-num">1,500 MW</div>
+      <div class="ac-title">Solar and renewables added in 2026 as Zambia moves off hydro dependency</div>
+      <div class="ac-body">Rural electrification, off-grid solar, Lusaka-Ndola Dual Carriageway, feeder roads, TAZARA and Lobito corridor upgrades. Non-hydro renewables rising to 33 percent of the national energy mix. Airports being upgraded.</div>
+      <div class="ac-src"><a href="https://www.lusakatimes.com/2025/09/27/zambia-unveils-k253-1-billion-2026-budget-to-consolidate-economic-gains/" target="_blank" rel="noopener">Lusaka Times — Budget 2026 Overview</a></div>
+    </div>
+    <div class="achieve-card">
+      <div class="ac-cat">Civil Service Recruitment</div>
+      <div class="ac-num">50,000+</div>
+      <div class="ac-title">Zambians employed in uniform and public service since 2021 — and recruitment has not stopped</div>
+      <div class="ac-body">30,000+ teachers recruited July 2022 alone. 11,276 nurses, doctors, and health workers August 2022. Continuous periodic recruitment of Zambia Police, Zambia National Service, Zambia Air Force, Zambia Army, Zambia Correctional Service prison warders, and other uniformed services. Every one of these positions is reserved for Zambian citizens only. These are not contracts. They are careers with pension, housing allowance, and medical cover — benefits a fraudulent NRC holder should never be able to access.</div>
+      <div class="ac-src"><a href="https://en.wikipedia.org/wiki/Economy_of_Zambia" target="_blank" rel="noopener">Economy of Zambia — Wikipedia (updated 2025)</a> and <a href="https://zambianobserver.com/upnd-highlights-first-term-achievements-as-zambians-prepare-to-renew-the-partys-mandate/" target="_blank" rel="noopener">Zambian Observer — UPND Achievements</a></div>
+    </div>
+    <div class="achieve-card">
+      <div class="ac-cat">Youth and Skills</div>
+      <div class="ac-num">200,000</div>
+      <div class="ac-title">Young Zambians trained through ZNS, TEVET, and CDF skills programmes</div>
+      <div class="ac-body">Tourism rising from 500,000 to 2.2 million visitors. Young Zambians farming commercially and building agri-businesses. GDP averaging 5.2 percent annually from 2021 to 2025, up from 1.6 percent in the four prior years.</div>
+      <div class="ac-src"><a href="https://zambianobserver.com/upnd-highlights-first-term-achievements-as-zambians-prepare-to-renew-the-partys-mandate/" target="_blank" rel="noopener">Zambian Observer — UPND Achievements March 2026</a></div>
+    </div>
+  </div>
+
+  <p>This is the foundation. It is real. It is incomplete. Corruption remains rampant and it shows up most visibly in the civil servant selling NRCs for K500 and the immigration officer who makes sure a deported Congolese businessman can return three times. Nepotism continues to cost talented Zambians the opportunities their competence deserves. The tribal opposition culture that destroys good policies before they can mature, that would rather see the country fail than credit a rival party, is one of the most consistent brakes on Zambia's development that exists. India earns over eight billion dollars annually from medical tourism, including from African leaders who fly there for treatment, from a developing country with no oil and complex governance challenges, simply by building systems good enough that others want to access them. Zambia has the peace, the land, the English, and now the infrastructure foundations to build something equivalent in education, healthcare, and tourism if it finishes what it started.</p>
+
+<!-- ══════════════════════════════════════════
+     CHAPTER 7 — WHY ZAMBIANS LEAVE
+     The consequence of everything above.
+     Brain drain as rational decision.
+     Dubai worship as grief wearing admiration.
+══════════════════════════════════════════ -->
+
+  <div class="chapter-marker">Chapter Seven</div>
+  <h2>We Did Not Leave Because We Hate Zambia. We Left Because Zambia Stopped Making Us Feel Like We Belonged in It.</h2>
+
+  <p>I left. Many of us did. Not out of shame and not out of a lack of patriotism. We left because the system kept confirming, in small ways and large ones, that our citizenship entitled us to nothing that a foreigner with money and the right agent could not also access. We watched the same political families rotate through ministerial positions and board appointments across decades while people with real ability and real qualifications waited for a turn that never materialised. We watched tribal opposition politics destroy policies that were working simply because a rival had made them. We watched corruption reward loyalty and punish competence so consistently that the rational decision was to take your competence somewhere it would be rewarded.</p>
+
+  <p>I have stood at immigration counters in multiple countries and felt what it means to be a citizen in a place where that status means something specific and protected. I have been in the UAE and watched Emirati nationals move through their city with the particular ease of people who have been told, every day, by every system around them, that the country was built for them. And I have watched Zambians in the Gulf look at that ease and feel something complicated — something that looks like admiration from the outside but is actually grief wearing admiration's mask.</p>
+
+  <p>Because the Zambian in Dubai knows the truth. They know that the country they are serving is 83,600 square kilometres of desert managed by 7 families who inherited it. They know that they come from a country nine times that size with real water, real soil, real minerals, and a democracy. And they go back to serving those families anyway, because the salary feels like dignity compared to what home offers, and dignity is not something people are willing to sacrifice for patriotism alone.</p>
+
+  <p>The Zambians who worship Gulf royals from social media accounts in Lusaka and Kitwe are not stupid. They are grieving. They are watching a system work for a small group of people in a faraway desert and feeling the weight of knowing that their own system, in a country with vastly more natural endowment, refuses to work for them in comparable ways. That grief is the most accurate signal available of exactly what needs to be fixed.</p>
+
+<!-- ══════════════════════════════════════════
+     CHAPTER 8 — WHAT NEEDS TO CHANGE
+     Specific reforms. Actionable. Connected
+     to everything that came before.
+══════════════════════════════════════════ -->
+
+  <div class="chapter-marker">Chapter Eight</div>
+  <h2>Six Specific Things That Would Change the Equation for Zambian Citizens</h2>
+
+  <div class="rec-grid fade">
+    <div class="rec-card">
+      <div class="r-num">REFORM 01</div>
+      <div class="r-title">Complete the biometric NRC and integrate it across all government systems</div>
+      <div class="r-body">Every NRC linked to birth records and cross-referenced in real time with PACRA, the land register, and Ministry of Labour. Rwanda's Irembo national digital services platform achieved full integration within two years of launch. Zambia has the technical capacity. The biometric rollout is underway across SADC. The task now is completing the integration so that a K500 fraudulent NRC cannot open a land access door, a voter registration, or a PACRA business registration undetected.</div>
+    </div>
+    <div class="rec-card">
+      <div class="r-num">REFORM 02</div>
+      <div class="r-title">Prosecute insiders publicly and make the consequences nationally visible</div>
+      <div class="r-body">Every document fraud syndicate has a Zambian government officer at its centre. The August 2025 Ndola arrest was a start. Until such officers face dismissal, asset forfeiture, and imprisonment that their colleagues see reported prominently and cannot look away from, the cost of participating remains lower than the benefit. The civil servant insider is the entire business model. Destroy the supply and the market collapses.</div>
+    </div>
+    <div class="rec-card">
+      <div class="r-num">REFORM 03</div>
+      <div class="r-title">Complete the land audit Parliament called for in 2026 — with actual reversion</div>
+      <div class="r-body">All land allocated to foreign-controlled entities since 2005, compared against investment pledge delivery records. Where promised factories, farms, and employment were never delivered, reversion proceedings must follow. Nominee shareholding used to bypass the 75 percent Zambian participation requirement in PACRA-registered companies must become a criminal offence, not a civil penalty that costs less than the benefit it protects.</div>
+    </div>
+    <div class="rec-card">
+      <div class="r-num">REFORM 04</div>
+      <div class="r-title">Citizen employment quotas enforced digitally the way the UAE enforces Emiratisation</div>
+      <div class="r-body">Sector-specific Zambian employment quotas backed by financial penalties enforced through a digital compliance system linked to business licensing and tax registration. Triple the labour inspectorate staffing. Every employer operating in Zambia should understand, before they make a hiring decision, that putting a foreign national in a role reserved for Zambian citizens will cost them more than hiring the Zambian alternative.</div>
+    </div>
+    <div class="rec-card">
+      <div class="r-num">REFORM 05</div>
+      <div class="r-title">Push regional integration with conditions, not open borders for failed governance</div>
+      <div class="r-body">Zambia should lead at the AU and SADC for a regional mobility framework that ties free movement to governance benchmarks. Countries whose policy failures produce mass undocumented outflows into neighbouring states must contribute to the costs absorbed by receiving countries. Integration must be reciprocal. Zambia opens its market and systems to those who come through proper channels. It closes its borders to the overflow of governments that loot their people and throw the burden at Zambia.</div>
+    </div>
+    <div class="rec-card">
+      <div class="r-num">REFORM 06</div>
+      <div class="r-title">Build Zambia as a regional destination — make citizenship worth something by making the country worth visiting</div>
+      <div class="r-body">India earns over eight billion dollars annually from medical tourism from developing countries, including African leaders who fly there for treatment without embarrassment. Zambia has the peace, the English, the stability, the waterfalls, and now the infrastructure foundations. Regional education hubs, regional healthcare facilities, expanded national parks and tourism infrastructure. Citizenship becomes prestigious when the country becomes somewhere others want to access through proper channels and pay to enter legally.</div>
+    </div>
+  </div>
+
+  <p>Zambia is not a poor country. It is a country where the system that should convert its wealth into citizen welfare was never finished. The foundation being built since 2021 is real and it deserves to be protected from the tribal politics and short-term opposition that would rather it fail than succeed under a rival government. What it needs on top of that foundation is the enforcement structure, the identity integrity, and the regional posture that makes being Zambian mean something in the same daily, visible, material way that being Emirati means something in Dubai. Not by copying the UAE's politics. By copying the UAE's commitment to protecting what belongs to its people.</p>
+
+  <p>We are right to demand that. And we should say it loudly until it is done.</p>
+
+</article>
+
+<div class="closing">
+  <h3>"Zambia has more land, more water, more minerals, and more democratic freedom than the UAE. What it is missing is the finished system that makes citizens feel that wealth every day."</h3>
+  <p>The foundation is being built. The enforcement structure needs to sit on top of it. The identity integrity needs to be restored. And the country needs to stop absorbing the overflow of its neighbours' governance failures without conditions. That is the argument. That is the solution.</p>
+</div>
+
+<div class="series-nav">
+  <p>Part of the series: The Zambia We Are Leaving On The Table</p>
+  <a href="the-dollar-lie.html">← Article 1: The Dollar Lie — How poverty metrics and credit ratings trap Zambia in avoidable debt</a>
+</div>
+
+<section class="references">
+  <div class="references-inner">
+    <h3>Sources and References</h3>
+    <p class="ref-note">Every factual claim in this article is sourced below. Click any reference number in the text to return here. Click the link to open the original document. No figures were fabricated. Where estimates are used they are labelled clearly as estimates.</p>
+    <ol class="ref-list">
+      <li id="ref1">
+        <span class="ref-num">[1]</span>
+        <div><strong>Zambia Customary Land — 94% of national territory, reserved for citizens by law</strong><br>
+        Customary tenure covers approximately 93 to 94 percent of Zambia's total land area, administered by chiefs and community structures. Foreigners legally restricted from accessing customary land without presidential consent and community approval. Sources: Land Act 1995, Zambia Ministry of Lands policy documents, and multiple land tenure research papers.<br>
+        <a href="https://www.propertyend.com/zambia-property-advice/different-types-of-land-titles-in-zambia/" target="_blank" rel="noopener">propertyend.com — Land Titles in Zambia 2025</a> and <a href="https://nitumezifarms.com/how-to-acquire-traditional-land-in-zambia/" target="_blank" rel="noopener">nitumezifarms.com — Acquiring Traditional Land in Zambia</a>
+        <a class="back-link" href="#back1">return</a></div>
+      </li>
+      <li id="ref2">
+        <span class="ref-num">[2]</span>
+        <div><strong>IOM Zambia Migration Profile 2019 and UNHCR Zambia Annual Report 2024</strong><br>
+        170,200 registered immigrants 2019. Top origins: DRC, Angola, Zimbabwe, India, Rwanda, Tanzania, South Africa, Somalia, UK, Burundi. 106,770 registered refugees and asylum seekers end 2024, majority from DRC. Settlements at Meheba, Mayukwayukwa, Mantapala, and urban areas including Lusaka, Ndola, and Kitwe.<br>
+        <a href="https://migrants-refugees.va/country-profile/zambia/" target="_blank" rel="noopener">migrants-refugees.va — IOM Zambia Country Profile 2021</a> and <a href="https://www.unhcr.org/where-we-work/countries/zambia" target="_blank" rel="noopener">unhcr.org — UNHCR Zambia 2024</a>
+        <a class="back-link" href="#back2">return</a></div>
+      </li>
+      <li id="ref3">
+        <span class="ref-num">[3]</span>
+        <div><strong>Daily Nation Zambia — Lusaka Crackdown July 2025</strong><br>
+        Reports July 4, 2025 joint operation: 255 total detained, nationality breakdown as cited in article. Conviction of Blessings Tembo, 29, for transporting 50 undocumented Ethiopians in Shoprite-branded distribution truck.<br>
+        <a href="https://www.dailynationzambia.com/2025/07/213-illegal-immigrants-detained-in-lusaka-crackdown/" target="_blank" rel="noopener">dailynationzambia.com — Lusaka crackdown July 2025</a>
+        <a class="back-link" href="#back3">return</a></div>
+      </li>
+      <li id="ref4">
+        <span class="ref-num">[4]</span>
+        <div><strong>Africa Center — African Migration Trends to Watch in 2025, March 2025</strong><br>
+        85 percent Ethiopian and 14 percent Somali on the southern corridor. Zambia named as key transit country. Pattern of informal settlement documented along Zambia's northern corridor routes.<br>
+        <a href="https://africacenter.org/spotlight/migration-trends-2025/" target="_blank" rel="noopener">africacenter.org — Migration Trends 2025</a>
+        <a class="back-link" href="#back4">return</a></div>
+      </li>
+      <li id="ref5">
+        <span class="ref-num">[5]</span>
+        <div><strong>Emirati Nationality Law and UAE Political Structure</strong><br>
+        UAE total population approximately 9.9 million. Emirati citizens approximately 1 million, under 10 percent. The 7 ruling families identified by emirate. No national elections for federal government. Citizenship by royal nomination only. 30-year minimum residency for consideration. Children of foreign nationals born in UAE have no automatic citizenship.<br>
+        <a href="https://en.wikipedia.org/wiki/Emirati_nationality_law" target="_blank" rel="noopener">en.wikipedia.org — Emirati Nationality Law</a> and <a href="https://u.ae/en/information-and-services/passports-and-traveling/emirati-nationality" target="_blank" rel="noopener">u.ae — Emirati Nationality (official)</a>
+        <a class="back-link" href="#back5">return</a></div>
+      </li>
+      <li id="ref6">
+        <span class="ref-num">[6]</span>
+        <div><strong>UAE Government Social Welfare Portal — AED 28 billion programme</strong><br>
+        Marriage grant up to AED 150,000, housing allocation, free education through university and overseas, healthcare fully subsidised including treatment abroad, fuel 85% subsidy, electricity and water 50% subsidy, food grants AED 500 per household.<br>
+        <a href="https://u.ae/en/information-and-services/social-affairs/social-welfare/social-welfare-programmes" target="_blank" rel="noopener">u.ae — Social Welfare Programmes (official UAE government)</a></div>
+      </li>
+      <li id="ref7">
+        <span class="ref-num">[7]</span>
+        <div><strong>Zambia Monitor — NRC Fraud Syndicate Arrested, August 2025</strong><br>
+        Six-person syndicate including Ndola Passport Office insider. Burundian refugee with full Zambian identity. 903 genuine laminating pouches and blank NRC cards recovered. Connections to human smuggling and embassy visa fraud.<br>
+        <a href="https://www.zambiamonitor.com/zambia-immigration-bursts-syndicate-producing-fake-national-registration-cards-six-arrested/" target="_blank" rel="noopener">zambiamonitor.com — NRC fraud syndicate August 2025</a></div>
+      </li>
+      <li id="ref8">
+        <span class="ref-num">[8]</span>
+        <div><strong>UPND Government Achievements — National Assembly Budget Speech September 2025 and Zambian Observer March 2026</strong><br>
+        Free education 2.3 million children. Education budget K18.1B to K31.4B. 30,000 teachers recruited. SCT 5.7 million people. CDF K1.6M to K30.8M per constituency. Copper from 280,000 to 1M+ MT. Tourism 500,000 to 2.2 million. GDP 5.2% average 2021–2025.<br>
+        <a href="https://www.parliament.gov.zm/node/12586" target="_blank" rel="noopener">parliament.gov.zm — Budget Speech 2026</a> and <a href="https://zambianobserver.com/upnd-highlights-first-term-achievements-as-zambians-prepare-to-renew-the-partys-mandate/" target="_blank" rel="noopener">Zambian Observer — UPND Achievements March 2026</a></div>
+      </li>
+      <li id="ref9">
+        <span class="ref-num">[9]</span>
+        <div><strong>Zambia Department of Immigration — Press Releases 2024 to 2025</strong><br>
+        Multiple documented operations: 111 apprehended Copperbelt May 2024, single day. 222 apprehended nationwide June 2024, single day. 58 undocumented Ethiopians Serenje June 2024. Congolese man deported three times 2016 to 2024. Pattern of weekly operations across all provinces consistently since 2022.<br>
+        <a href="https://www.zambiaimmigration.gov.zm/news/press-releases/" target="_blank" rel="noopener">zambiaimmigration.gov.zm — Press Releases</a></div>
+      </li>
+      <li id="ref10">
+        <span class="ref-num">[10]</span>
+        <div><strong>Zambian Observer — Land, Ownership and the Battle for Zambia's Soil, March 2026</strong><br>
+        Parliament's 2026 motion on foreign land acquisition. PACRA nominee structures used to bypass 75 percent Zambian participation requirement. Weak monitoring allowing land to change hands without promised investment materialising.<br>
+        <a href="https://zambianobserver.com/land-ownership-the-battle-for-zambias-soil/" target="_blank" rel="noopener">zambianobserver.com — Land and ownership March 2026</a></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-inner">
+    <h3>About the Author</h3>
+    <ul class="qual-list">
+      <li><strong>PhD Candidate — Development Studies</strong>University of South Africa (UNISA)</li>
+      <li><strong>MSBA — Master of Science in Business and Data Analytics</strong>Northeastern University, Boston, Massachusetts, USA</li>
+      <li><strong>MCA — Master of Computer Applications</strong>Australia / India</li>
+      <li><strong>B.Tech — Bachelor of Technology in Civil Engineering</strong>Jain University, Bangalore, India</li>
+    </ul>
+    <p style="font-family:'Lora',serif;font-size:14px;color:#9ac9b2;margin-bottom:24px;line-height:1.82;">Zambian civil engineer, data analyst, and policy writer. Based in San Francisco, California, USA.</p>
+    <div class="tags-grid">
+      <div class="tag"><strong>Immigration Policy</strong><span>Identity, enforcement, reform</span></div>
+      <div class="tag"><strong>Land Governance</strong><span>Customary tenure, ownership, rights</span></div>
+      <div class="tag"><strong>Infrastructure Policy</strong><span>Transport, roads, financing</span></div>
+      <div class="tag"><strong>Development Economics</strong><span>Sovereignty, SDGs, Africa</span></div>
+      <div class="tag"><strong>Data Analytics</strong><span>SQL, Python, Tableau, R</span></div>
+      <div class="tag"><strong>Labour Systems</strong><span>Employment law, enforcement</span></div>
+    </div>
+    <div class="links-row">
+      <a class="lbtn" href="https://linkedin.com/in/ackrad" target="_blank">linkedin.com/in/ackrad</a>
+      <a class="lbtn" href="https://github.com/Ackrad-Data-Analyst" target="_blank">github.com/Ackrad-Data-Analyst</a>
+      <a class="lbtn" href="mailto:sethackrad@gmail.com">sethackrad@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <strong style="color:var(--ink2);">Ackrad Seth Shimwense</strong> · San Francisco, California, USA · Zambian<br>
+    Part of the series: The Zambia We Are Leaving On The Table<br>
+    All data sourced and linked above. No figures fabricated. Estimates are clearly labelled as estimates.
+  </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  document.getElementById('progress').style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+});
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+const mono = "'Space Mono', monospace";
+const ic = '#2e2c28';
+const gc = 'rgba(90,88,80,0.12)';
+
+new Chart(document.getElementById('chart1'), {
+  type: 'bar',
+  data: {
+    labels: [
+      'Registered immigrants — IOM 2019',
+      'UNHCR refugees and asylum seekers 2024',
+      'Undocumented — conservative minimum estimate',
+      'Fraudulent NRC holders — minimum estimate',
+      'Total minimum plausible non-citizens'
+    ],
+    datasets: [
+      {
+        label: 'Officially documented',
+        data: [170200, 106770, 0, 0, 276970],
+        backgroundColor: '#0b4226', borderRadius: 4, borderWidth: 0
+      },
+      {
+        label: 'Conservative minimum estimate',
+        data: [0, 0, 800000, 80000, 880000],
+        backgroundColor: '#8e1a10', borderRadius: 4, borderWidth: 0
+      }
+    ]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => ' ' + c.dataset.label + ': ' + c.raw.toLocaleString() } }
+    },
+    scales: {
+      x: {
+        grid: { color: gc },
+        ticks: { font: { size: 10, family: mono }, color: ic, callback: v => v >= 1000 ? (v/1000).toFixed(0) + 'k' : v }
+      },
+      y: { grid: { display: false }, ticks: { font: { size: 10, family: mono }, color: ic } }
+    }
+  }
+});
+</script>
+</body>
+</html>
